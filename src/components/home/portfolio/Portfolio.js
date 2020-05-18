@@ -5,7 +5,6 @@ import ContentHolder from '../../global/contentHolder/ContentHolder';
 import { graphql, useStaticQuery } from 'gatsby';
 import { v4 as uuidv4 } from 'uuid';
 import styles from '../portfolio/portfolio.module.css';
-import globalstyles from '../../global/global.module.css';
 
 const query = graphql`
 	{

@@ -49,6 +49,13 @@ export default function HireMe() {
 							here
 						</a>
 					</p>
+					<p>
+						PS- I have a{' '}
+						<a href="blogpost.com" className={styles.hireMeBlogPost}>
+							blog post
+						</a>{' '}
+						on building great partnerships
+					</p>
 				</Col>
 			</Row>
 		</section>

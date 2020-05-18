@@ -1,12 +1,14 @@
 .link {
 	color: black;
 	margin-left: 1rem;
+	transition: color 0.3s;
 }
 
 .link:hover {
 	color: black;
 	text-decoration: none;
 	font-weight: 400;
+	color: rgb(253, 182, 49);
 }
 
 .img {
