@@ -1,22 +1,38 @@
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import styles from '../navigationBar/navigationBar.module.css';
-import { Link } from 'gatsby';
+import { Link, graphql, useStaticQuery } from 'gatsby';
 import Links from '../../../constants/Links';
 import { v4 as uuidv4 } from 'uuid';
 
+const query = graphql`
+	query {
+		allContentfulProfile {
+			nodes {
+				name
+				picture {
+					fluid {
+						src
+					}
+				}
+				tittle
+			}
+		}
+	}
+`;
+
 export default function NavigationBar() {
+	const data = useStaticQuery(query);
+	const { name, tittle, picture } = data.allContentfulProfile.nodes[0];
 	return (
 		<Navbar collapseOnSelect expand="md" className={styles.NavigationBar}>
+			{console.log(picture)}
 			<Navbar.Brand href="#home">
 				<div className={styles.authorDetails}>
-					<img
-						src="https://machohairstyles.com/wp-content/uploads/2016/06/Spruce-Gold-Locks.jpg"
-						className={styles.img}
-					/>
+					<img src={picture.fluid} className={styles.img} />
 					<div>
-						<p className={styles.name}>Kishokanth Jeganathan</p>
-						<p className={styles.title}>Front-end Developer</p>
+						<p className={styles.name}>{name}</p>
+						<p className={styles.title}>{tittle}</p>
 					</div>
 				</div>
 			</Navbar.Brand>

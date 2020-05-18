@@ -7,22 +7,20 @@ import { v4 as uuidv4 } from 'uuid';
 
 const query = graphql`
 	{
-		allContentfulPortfolioItem(
-			filter: { featureOnHomepage: { eq: true } }
-			sort: { fields: createdAt, order: ASC }
-		) {
+		allContentfulMyPortfolio(filter: { featureOnHomepage: { eq: true } }, sort: { fields: order, order: ASC }) {
 			nodes {
 				slug
+				order
 				nameOfProject
+				featureOnHomepage
 				projectIntro {
 					internal {
 						content
 					}
 				}
-				featureOnHomepage
 				headerimage {
 					fluid {
-						...GatsbyContentfulFluid
+						src
 					}
 				}
 			}
@@ -36,7 +34,7 @@ const query = graphql`
 
 export default function Portfolio() {
 	const data = useStaticQuery(query);
-	const singleProject = data.allContentfulPortfolioItem.nodes;
+	const singleProject = data.allContentfulMyPortfolio.nodes;
 	console.log(singleProject);
 
 	const { subtittle, tittle } = data.contentfulSectionTittles;
@@ -52,7 +50,7 @@ export default function Portfolio() {
 							key={uuidv4()}
 							nameOfProject={project.nameOfProject}
 							src={project.headerimage.fluid}
-							intro={project.projectIntro.internal}
+							intro={project.projectIntro.internal.content}
 							slug={project.slug}
 						/>
 					))}

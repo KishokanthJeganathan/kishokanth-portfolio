@@ -1,1 +1,15 @@
+.read-more {
+	color: rgb(253, 182, 49);
+}
 
+.read-more:hover {
+	color: rgb(253, 182, 49);
+}
+
+.intro {
+	margin: 0;
+}
+
+.content-holder {
+	margin-bottom: 1.5rem;
+}
