@@ -1,0 +1,30 @@
+.footer {
+	margin-top: auto;
+	display: flex;
+	justify-content: center;
+}
+
+.footer-social-media,
+.email {
+	display: flex;
+	justify-content: center;
+}
+.social-media {
+	color: black;
+	font-size: 1.8rem;
+	margin: 0.5rem 1rem;
+}
+
+.social-media:hover {
+	color: black;
+}
+
+.CTA {
+	text-align: center;
+	margin: 0;
+}
+
+.email-address {
+	color: black;
+	padding-left: 0.5rem;
+}

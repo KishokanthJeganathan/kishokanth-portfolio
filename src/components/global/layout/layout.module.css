@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,600;1,400&family=Open+Sans&display=swap');
+
+* {
+	font-family: 'Muli', sans-serif;
+}
+.layout {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
