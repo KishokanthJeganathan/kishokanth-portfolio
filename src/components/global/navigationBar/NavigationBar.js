@@ -3,6 +3,7 @@ import { Navbar, Nav } from 'react-bootstrap';
 import styles from '../navigationBar/navigationBar.module.css';
 import { Link } from 'gatsby';
 import Links from '../../../constants/Links';
+import { v4 as uuidv4 } from 'uuid';
 
 export default function NavigationBar() {
 	return (
@@ -23,7 +24,7 @@ export default function NavigationBar() {
 			<Navbar.Collapse id="responsive-navbar-nav">
 				<Nav className="ml-auto">
 					{Links.map((link) => (
-						<Link className={styles.link} to={link.path}>
+						<Link className={styles.link} to={link.path} key={uuidv4()}>
 							{link.text}
 						</Link>
 					))}

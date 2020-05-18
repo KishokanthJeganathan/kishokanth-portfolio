@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../footer/footer.module.css';
 import socialMedia from '../../../constants/Socialmedia';
-
+import { v4 as uuidv4 } from 'uuid';
 import { Row, Col } from 'react-bootstrap';
 
 export default function Footer() {
@@ -15,7 +15,7 @@ export default function Footer() {
 				</Col>
 				<Col className={styles.footerSocialMedia}>
 					{socialMedia.map((platform) => (
-						<a className={styles.socialMedia} href={platform.url}>
+						<a className={styles.socialMedia} href={platform.url} key={uuidv4()}>
 							{platform.icon}
 						</a>
 					))}
