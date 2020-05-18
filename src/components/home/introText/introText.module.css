@@ -1,5 +1,5 @@
 .intro-text {
-	height: 50vh;
+	height: 80vh;
 	display: flex;
 	justify-content: center; /* align horizontal */
 	flex-direction: column;
@@ -12,4 +12,8 @@
 
 .intro-text-CTA:hover {
 	color: rgb(253, 182, 49);
+}
+
+.emoji {
+	padding-left: 0.5rem;
 }

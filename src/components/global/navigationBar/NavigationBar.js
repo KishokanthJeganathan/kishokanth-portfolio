@@ -4,6 +4,7 @@ import styles from '../navigationBar/navigationBar.module.css';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import Links from '../../../constants/Links';
 import { v4 as uuidv4 } from 'uuid';
+import Img from 'gatsby-image';
 
 const query = graphql`
 	query {
@@ -12,7 +13,7 @@ const query = graphql`
 				name
 				picture {
 					fluid {
-						src
+						...GatsbyContentfulFluid
 					}
 				}
 				tittle
@@ -26,10 +27,9 @@ export default function NavigationBar() {
 	const { name, tittle, picture } = data.allContentfulProfile.nodes[0];
 	return (
 		<Navbar collapseOnSelect expand="md" className={styles.NavigationBar}>
-			{console.log(picture)}
 			<Navbar.Brand href="#home">
 				<div className={styles.authorDetails}>
-					<img src={picture.fluid} className={styles.img} />
+					<img src={picture.fluid.src} className={styles.img} />
 					<div>
 						<p className={styles.name}>{name}</p>
 						<p className={styles.title}>{tittle}</p>

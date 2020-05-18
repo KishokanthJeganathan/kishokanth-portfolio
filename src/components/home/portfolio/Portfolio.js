@@ -4,6 +4,8 @@ import { Col, Row } from 'react-bootstrap';
 import ContentHolder from '../../global/contentHolder/ContentHolder';
 import { graphql, useStaticQuery } from 'gatsby';
 import { v4 as uuidv4 } from 'uuid';
+import styles from '../portfolio/portfolio.module.css';
+import globalstyles from '../../global/global.module.css';
 
 const query = graphql`
 	{
@@ -20,7 +22,7 @@ const query = graphql`
 				}
 				headerimage {
 					fluid {
-						src
+						...GatsbyContentfulFluid
 					}
 				}
 			}
@@ -35,18 +37,17 @@ const query = graphql`
 export default function Portfolio() {
 	const data = useStaticQuery(query);
 	const singleProject = data.allContentfulMyPortfolio.nodes;
-	console.log(singleProject);
-
 	const { subtittle, tittle } = data.contentfulSectionTittles;
+
 	return (
 		<section>
-			<Tittle tittle={`${tittle} 🙌`} subtittle={`${subtittle} `} />
+			<Tittle tittle={`${tittle} 🙌`} subtittle={`${subtittle}`} />
 			<Col>
-				<Row>
+				<Row className={styles.portfolio}>
 					{singleProject.map((project) => (
 						<ContentHolder
 							xs="12"
-							sm="6"
+							md="6"
 							key={uuidv4()}
 							nameOfProject={project.nameOfProject}
 							src={project.headerimage.fluid}

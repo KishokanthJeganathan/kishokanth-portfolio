@@ -1,13 +1,17 @@
 .read-more {
 	color: rgb(253, 182, 49);
+	font-size: 1.2rem;
 }
 
 .read-more:hover {
 	color: rgb(253, 182, 49);
 }
 
-.intro {
+.content {
 	margin: 0;
+	padding-left: 1rem;
+	padding-right: 5rem;
+	padding-top: 0.6rem;
 }
 
 .content-holder {

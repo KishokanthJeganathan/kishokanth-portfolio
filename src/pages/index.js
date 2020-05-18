@@ -4,6 +4,7 @@ import { Layout } from '../components/global/layout/Layout';
 import IntroText from '../components/home/introText/IntroText';
 import { Row } from 'react-bootstrap';
 import Portfolio from '../components/home/portfolio/Portfolio';
+import HireMe from '../components/home/hireMeCTA/HireMe';
 
 export default function index() {
 	return (
@@ -11,6 +12,7 @@ export default function index() {
 			<Row>
 				<IntroText />
 				<Portfolio />
+				<HireMe />
 			</Row>
 		</Layout>
 	);
