@@ -6,6 +6,7 @@ import { Row } from 'react-bootstrap';
 import Portfolio from '../components/home/portfolio/Portfolio';
 import HireMe from '../components/home/hireMeCTA/HireMe';
 import BlogPosts from '../components/home/blogsPosts/BlogPosts';
+import NewsletterForm from '../components/home/newsletterForm/NewsletterForm';
 
 export default function index() {
 	return (
@@ -15,6 +16,7 @@ export default function index() {
 				<Portfolio />
 				<HireMe />
 				<BlogPosts />
+				<NewsletterForm />
 			</Row>
 		</Layout>
 	);

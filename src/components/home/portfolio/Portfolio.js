@@ -9,13 +9,13 @@ import globalstyles from '../../global/global.module.css';
 import { BsArrowRight } from 'react-icons/Bs';
 
 const query = graphql`
-	{
+	query {
 		allContentfulMyPortfolio(filter: { featureOnHomepage: { eq: true } }, sort: { fields: order, order: ASC }) {
 			nodes {
-				slug
-				order
-				nameOfProject
 				featureOnHomepage
+				nameOfProject
+				order
+				slug
 				projectIntro {
 					internal {
 						content
@@ -28,9 +28,11 @@ const query = graphql`
 				}
 			}
 		}
-		contentfulSectionTittles {
-			tittle
-			subtittle
+		allContentfulSectionTittles {
+			nodes {
+				subtittle
+				tittle
+			}
 		}
 	}
 `;
@@ -38,7 +40,8 @@ const query = graphql`
 export default function Portfolio() {
 	const data = useStaticQuery(query);
 	const singleProject = data.allContentfulMyPortfolio.nodes;
-	const { subtittle, tittle } = data.contentfulSectionTittles;
+	const { subtittle, tittle } = data.allContentfulSectionTittles.nodes[2];
+	console.log(data);
 
 	return (
 		<section>

@@ -32,7 +32,7 @@ const query = graphql`
 
 export default function HireMe() {
 	const data = useStaticQuery(query);
-	const info = data.allContentfulSectionTittles.nodes[2];
+	const info = data.allContentfulSectionTittles.nodes[0];
 	const { subtittle, tittle } = info;
 	const CTA = data.allContentfulCta.nodes[0].text.internal.content;
 
