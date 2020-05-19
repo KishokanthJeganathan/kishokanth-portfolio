@@ -5,6 +5,7 @@
 	justify-content: center; /* align horizontal */
 	flex-direction: column;
 	padding: 1rem;
+	margin-top: 1rem;
 }
 
 .CTA {
