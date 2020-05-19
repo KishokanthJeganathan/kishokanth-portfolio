@@ -41,7 +41,6 @@ export default function Portfolio() {
 	const data = useStaticQuery(query);
 	const singleProject = data.allContentfulMyPortfolio.nodes;
 	const { subtittle, tittle } = data.allContentfulSectionTittles.nodes[2];
-	console.log(data);
 
 	return (
 		<section>
