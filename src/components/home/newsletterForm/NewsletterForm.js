@@ -4,6 +4,7 @@ import styles from '../newsletterForm/newsletterForm.module.css';
 import { Col, Row } from 'react-bootstrap';
 import Tittle from '../../global/Tittle/Tittle';
 import { graphql, useStaticQuery } from 'gatsby';
+import globalstyles from '../../global/global.module.css';
 
 const query = graphql`
 	query {
@@ -56,7 +57,7 @@ export default function NewsletterForm() {
 					{submissionMessege}
 					<form onSubmit={handleSubmit}>
 						<label htmlFor="email address" className={styles.label}>
-							<p>Where can I reach you?</p>
+							<p className={globalstyles.p2}>Where can I reach you?</p>
 						</label>
 						<input
 							type="email"
@@ -75,7 +76,10 @@ export default function NewsletterForm() {
 							checked={checkbox}
 						/>
 						<label htmlFor="checkbox for GDPR compliance" className={styles.label}>
-							<p className={styles.disclaimer}>Follow rules</p>
+							<p className={styles.disclaimer}>
+								By subscribing to our newsletter, you grant us permission to send you further
+								correspondence. For more information, please visit our privacy policy.
+							</p>
 						</label>
 					</span>
 					<button onClick={handleSubmit} className={styles.button}>
