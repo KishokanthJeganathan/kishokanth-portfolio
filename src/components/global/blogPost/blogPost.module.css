@@ -1,0 +1,18 @@
+.read-more {
+	color: rgb(253, 182, 49);
+	font-size: 1.2rem;
+}
+
+.read-more:hover {
+	color: rgb(253, 182, 49);
+}
+
+.content {
+	margin: 0;
+	padding-left: 1rem;
+	line-height: normal;
+}
+
+.blog-post {
+	margin-bottom: 1.5rem;
+}

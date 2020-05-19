@@ -6,12 +6,20 @@
 	font-size: 2.2rem;
 }
 
+.h3 {
+	font-size: 1.8rem;
+}
+
 .p {
 	font-size: 1.2rem;
 }
 
 .p1 {
 	font-size: 1.4rem;
+}
+
+.p2 {
+	font-size: 1.2rem;
 }
 
 @media only screen and (max-device-width: 576px) {
