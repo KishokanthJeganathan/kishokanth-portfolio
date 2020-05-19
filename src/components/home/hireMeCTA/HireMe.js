@@ -35,7 +35,6 @@ export default function HireMe() {
 	const info = data.allContentfulSectionTittles.nodes[2];
 	const { subtittle, tittle } = info;
 	const CTA = data.allContentfulCta.nodes[0].text.internal.content;
-	console.log();
 
 	return (
 		<section>
@@ -50,10 +49,10 @@ export default function HireMe() {
 						</a>
 					</p>
 					<p>
-						PS- I have a{' '}
+						PS- I have a
 						<a href="blogpost.com" className={styles.hireMeBlogPost}>
 							blog post
-						</a>{' '}
+						</a>
 						on building great partnerships
 					</p>
 				</Col>

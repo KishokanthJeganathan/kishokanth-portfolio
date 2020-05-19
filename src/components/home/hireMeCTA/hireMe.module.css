@@ -5,7 +5,7 @@
 	justify-content: center; /* align horizontal */
 	flex-direction: column;
 	padding: 1rem;
-	margin-top: 1rem;
+	margin-top: 3rem;
 }
 
 .CTA {
@@ -23,6 +23,7 @@
 
 .hire-me-blog-post {
 	color: rgb(253, 182, 49);
+	padding: 0rem 0.5rem;
 }
 
 .hire-me-blog-post:hover {
