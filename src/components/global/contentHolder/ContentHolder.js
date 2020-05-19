@@ -11,8 +11,8 @@ export default function ContentHolder({ xs, sm, md, lg, nameOfProject, src, intr
 		<Col xs={xs} sm={sm} md={md} lg={lg} className={styles.contentHolder}>
 			<Img fluid={src} />
 			<div className={styles.content}>
-				<h3 className={globalstyles.h2}> {nameOfProject}</h3>
-				<p className={globalstyles.p1}>{intro}</p>
+				<h3 className={globalstyles.h3}> {nameOfProject}</h3>
+				<p className={globalstyles.p2}>{intro}</p>
 				<Link to={`/portfolio/${slug}`} className={styles.readMore}>
 					Read Casestudy <IoIosArrowForward />
 				</Link>

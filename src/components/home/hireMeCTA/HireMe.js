@@ -39,7 +39,7 @@ export default function HireMe() {
 	return (
 		<section>
 			<Row className={styles.hireMe}>
-				<Tittle tittle={`${tittle} 💻`} subtittle={`${subtittle}`} />
+				<Tittle tittle={`${tittle} 💻`} />
 				<Col xs={12} sm={10}>
 					<p className={globalstyles.p}>{CTA}</p>
 					<p className={globalstyles.p1}>

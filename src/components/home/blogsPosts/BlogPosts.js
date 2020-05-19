@@ -1,10 +1,12 @@
 import React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
-import { Row } from 'react-bootstrap';
+import { graphql, useStaticQuery, Link } from 'gatsby';
+import { Row, Col } from 'react-bootstrap';
 import Tittle from '../../global/Tittle/Tittle';
 import styles from '../blogsPosts/blogPosts.module.css';
 import { v4 as uuidv4 } from 'uuid';
 import BlogPost from '../../global/blogPost/BlogPost';
+import globalstyles from '../../global/global.module.css';
+import { BsArrowRight } from 'react-icons/Bs';
 
 const query = graphql`
 	{
@@ -44,20 +46,29 @@ export default function BlogPosts() {
 	return (
 		<section className={styles.blog}>
 			<Tittle tittle={`${tittle} ✍️`} subtittle={`${subtittle}`} />
-			<Row>
-				{blogPosts.map((project) => (
-					<BlogPost
-						xs="12"
-						sm="6"
-						md="4"
-						key={uuidv4()}
-						nameOfProject={project.nameOfProject}
-						src={project.headerimage.fluid}
-						intro={project.projectIntro.internal.content}
-						slug={project.slug}
-					/>
-				))}
-			</Row>
+			<Col>
+				<Row>
+					{blogPosts.map((project) => (
+						<BlogPost
+							xs="12"
+							sm="6"
+							md="4"
+							key={uuidv4()}
+							nameOfProject={project.nameOfProject}
+							src={project.headerimage.fluid}
+							intro={project.projectIntro.internal.content}
+							slug={project.slug}
+						/>
+					))}
+					<Col>
+						<Link className={styles.link}>
+							<span className={globalstyles.p1}>
+								See More Projects <BsArrowRight />
+							</span>
+						</Link>
+					</Col>
+				</Row>
+			</Col>
 		</section>
 	);
 }

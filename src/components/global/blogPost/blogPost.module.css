@@ -9,10 +9,11 @@
 
 .content {
 	margin: 0;
-	padding-left: 1rem;
+	padding: 0rem 1rem;
 	line-height: normal;
 }
 
 .blog-post {
 	margin-bottom: 1.5rem;
+	padding-left: 1rem;
 }
