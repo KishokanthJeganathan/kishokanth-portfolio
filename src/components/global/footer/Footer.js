@@ -37,20 +37,23 @@ export default function Footer() {
 							</div>
 						</div>
 					</Col>
-					<Col xs={12} md={3} className={styles.footerSocialMedia}>
+					<Col xs={12} md={4} className={styles.footerSocialMedia}>
 						{socialMedia.map((platform) => (
 							<a className={styles.socialMedia} href={platform.url} key={uuidv4()}>
 								{platform.icon}
 							</a>
 						))}
 					</Col>
-					<Col xs={12} md={5} className={styles.footerCTA}>
+					<Col xs={12} md={4} className={styles.footerCTA}>
 						<p className={styles.p}>
 							Enthusiastic about building something great? Let's get talking at
 							<a href="mailto:hello@kishokanth.com" className={styles.emailAddress}>
 								hello@kishokanth.com
 							</a>
 						</p>
+					</Col>
+					<Col xs={12} className={styles.copyright}>
+						{`©Kishokanth - ${new Date().getFullYear()}`}
 					</Col>
 				</Row>
 			</Col>
