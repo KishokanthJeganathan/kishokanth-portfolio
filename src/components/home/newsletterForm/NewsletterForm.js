@@ -23,6 +23,7 @@ export default function NewsletterForm() {
 	const [ email, setEmail ] = useState('');
 	const [ checkbox, setCheckbox ] = useState(false);
 	const [ submissionMessege, setSubmissionMessege ] = useState('');
+	const [ submissionSuccesful, setSubmissionSuccesful ] = useState(false);
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -36,6 +37,7 @@ export default function NewsletterForm() {
 					);
 					setEmail('');
 					setCheckbox(!checkbox);
+					setSubmissionSuccesful(data.msg === 'Thank you for subscribing!' ? true : false);
 				})
 				.catch((errors) => {
 					setSubmissionMessege(
@@ -55,36 +57,40 @@ export default function NewsletterForm() {
 				<Tittle tittle={`${tittle} 🔥`} subtittle={`${subtittle}`} />
 				<Col xs={12}>
 					{submissionMessege}
-					<form onSubmit={handleSubmit}>
-						<label htmlFor="email address" className={styles.label}>
-							<p className={globalstyles.p2}>Where can I reach you?</p>
-						</label>
-						<input
-							type="email"
-							value={email}
-							onChange={(e) => setEmail(e.target.value)}
-							className={styles.input}
-						/>
-					</form>
+					{!submissionSuccesful && (
+						<span>
+							<form onSubmit={handleSubmit}>
+								<label htmlFor="email address" className={styles.label}>
+									<p className={globalstyles.p2}>Where can I reach you?</p>
+								</label>
+								<input
+									type="email"
+									value={email}
+									onChange={(e) => setEmail(e.target.value)}
+									className={styles.input}
+								/>
+							</form>
 
-					<span className={styles.checkbox}>
-						<input
-							type="checkbox"
-							onChange={() => setCheckbox(!checkbox)}
-							name="checkbox"
-							value={checkbox}
-							checked={checkbox}
-						/>
-						<label htmlFor="checkbox for GDPR compliance" className={styles.label}>
-							<p className={styles.disclaimer}>
-								By subscribing to our newsletter, you grant us permission to send you further
-								correspondence. For more information, please visit our privacy policy.
-							</p>
-						</label>
-					</span>
-					<button onClick={handleSubmit} className={styles.button}>
-						Sign Up
-					</button>
+							<span className={styles.checkbox}>
+								<input
+									type="checkbox"
+									onChange={() => setCheckbox(!checkbox)}
+									name="checkbox"
+									value={checkbox}
+									checked={checkbox}
+								/>
+								<label htmlFor="checkbox for GDPR compliance" className={styles.label}>
+									<p className={styles.disclaimer}>
+										By subscribing to our newsletter, you grant us permission to send you further
+										correspondence. For more information, please visit our privacy policy.
+									</p>
+								</label>
+							</span>
+							<button onClick={handleSubmit} className={styles.button}>
+								Sign Up
+							</button>
+						</span>
+					)}
 				</Col>
 			</Row>
 		</Col>
