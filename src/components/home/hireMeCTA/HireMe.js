@@ -38,25 +38,27 @@ export default function HireMe() {
 
 	return (
 		<section>
-			<Row className={styles.hireMe}>
-				<Tittle tittle={`${tittle} 💻`} />
-				<Col xs={12} sm={10}>
-					<p className={globalstyles.p}>{CTA}</p>
-					<p className={globalstyles.p1}>
-						Let's get talking. Drop me a line
-						<a href="mailto:hello@kishokanth.com" className={styles.hireCTA}>
-							here
-						</a>
-					</p>
-					<p>
-						PS- I have a
-						<a href="blogpost.com" className={styles.hireMeBlogPost}>
-							blog post
-						</a>
-						on building great partnerships
-					</p>
-				</Col>
-			</Row>
+			<Col xs={12}>
+				<Row className={styles.hireMe}>
+					<Tittle tittle={`${tittle} 💻`} />
+					<Col xs={12} sm={10}>
+						<p className={globalstyles.p}>{CTA}</p>
+						<p className={globalstyles.p1}>
+							Let's get talking. Drop me a line
+							<a href="mailto:hello@kishokanth.com" className={styles.hireCTA}>
+								here
+							</a>
+						</p>
+						<p>
+							PS- I have a
+							<a href="blogpost.com" className={styles.hireMeBlogPost}>
+								blog post
+							</a>
+							on building great partnerships
+						</p>
+					</Col>
+				</Row>
+			</Col>
 		</section>
 	);
 }

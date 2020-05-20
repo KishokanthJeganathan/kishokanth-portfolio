@@ -18,6 +18,7 @@
 	border: 1px solid rgb(253, 182, 49);
 	border-radius: 2rem;
 	transition: color 0.8s;
+	background-color: white;
 }
 
 .button:hover {
