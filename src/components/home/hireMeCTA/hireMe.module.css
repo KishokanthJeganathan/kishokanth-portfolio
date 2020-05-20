@@ -1,5 +1,4 @@
 .hire-me {
-	min-height: 70vh;
 	background-color: rgba(206, 206, 206, 0.596);
 	display: flex;
 	justify-content: center;
@@ -28,4 +27,32 @@
 
 .hire-me-blog-post:hover {
 	color: rgb(253, 182, 49);
+}
+
+@media only screen and (max-device-width: 576px) {
+	.hire-me {
+		min-height: 70vh;
+	}
+}
+@media only screen and (min-device-width: 577px) and (max-device-width: 768px) {
+	.hire-me {
+		min-height: 70vh;
+	}
+}
+@media only screen and (min-device-width: 769px) and (max-device-width: 992px) {
+	.hire-me {
+		min-height: 50vh;
+	}
+}
+
+@media only screen and (min-device-width: 992px) and (max-device-width: 1300px) {
+	.hire-me {
+		min-height: 45vh;
+	}
+}
+
+@media only screen and (min-device-width: 1300px) {
+	.hire-me {
+		min-height: 50vh;
+	}
 }

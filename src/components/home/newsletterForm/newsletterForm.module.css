@@ -132,7 +132,7 @@
 
 @media only screen and (min-device-width: 1300px) {
 	.newsletterForm {
-		min-height: 60vh;
+		min-height: 50vh;
 	}
 
 	.disclaimer {
