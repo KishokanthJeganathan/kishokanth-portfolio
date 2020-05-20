@@ -4,14 +4,14 @@ import NavigationBar from '../navigationBar/NavigationBar';
 import Footer from '../footer/Footer';
 import styles from '../layout/layout.module.css';
 
-export const Layout = (props) => {
+export default function Layout({ children }) {
 	return (
 		<main>
 			<Container className={styles.layout}>
 				<NavigationBar />
-				{props.children}
-				{/* <Footer /> */}
+				{children}
+				<Footer />
 			</Container>
 		</main>
 	);
-};
+}

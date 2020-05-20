@@ -1,30 +1,133 @@
-.footer {
-	margin-top: auto;
-	display: flex;
-	justify-content: center;
-}
-
-.footer-social-media,
-.email {
-	display: flex;
-	justify-content: center;
-}
-.social-media {
-	color: black;
-	font-size: 1.8rem;
-	margin: 0.5rem 1rem;
-}
-
-.social-media:hover {
-	color: black;
-}
-
-.CTA {
-	text-align: center;
-	margin: 0;
-}
-
 .email-address {
 	color: black;
 	padding-left: 0.5rem;
+	color: rgb(253, 182, 49);
+}
+
+.email-address:hover {
+	color: rgb(253, 182, 49);
+}
+
+.footer {
+	margin-top: auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+.row {
+	margin: 3rem 0rem;
+}
+
+.img {
+	max-height: 3rem;
+	max-width: 3rem;
+	border-radius: 50%;
+	margin-right: 1rem;
+}
+
+.author-details {
+	display: flex;
+}
+
+.name {
+	margin: 0;
+	font-size: 1rem;
+}
+
+.title {
+	margin: 0;
+	font-size: 0.8rem;
+}
+
+.footer-social-media {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.social-media {
+	color: rgb(66, 66, 66);
+	font-size: 1.4rem;
+	margin: 0rem 0.5rem;
+	transition: color 0.6s;
+}
+
+.social-media :hover {
+	color: rgb(253, 182, 49);
+}
+
+.footer-CTA {
+	display: flex;
+	justify-content: flex-end;
+	text-align: right;
+}
+
+.p {
+	margin: 0;
+	font-size: 0.8rem;
+}
+
+@media only screen and (max-device-width: 768px) {
+	.name {
+		margin: 0;
+		font-size: 0.8rem;
+		padding-top: 0.2rem;
+	}
+
+	.title {
+		margin: 0;
+		font-size: 0.7rem;
+	}
+
+	.img {
+		margin-right: 0.6rem;
+	}
+
+	.author-details {
+		padding-top: 0.4rem;
+		display: flex;
+		justify-content: center;
+	}
+
+	.footer-social-media {
+		display: flex;
+		justify-content: center;
+		margin-top: 0.5rem;
+	}
+
+	.social-media {
+		font-size: 1.6rem;
+		margin: 0rem 0.5rem;
+	}
+
+	.footer-CTA {
+		text-align: center;
+		margin-top: 0.5rem;
+	}
+}
+
+@media only screen and (max-device-width: 990px) {
+	.author-details {
+		align-items: center;
+	}
+}
+
+@media only screen and (min-device-width: 769px) and (max-device-width: 992px) {
+	.social-media {
+		font-size: 1.6rem;
+		margin: 0rem 0.5rem;
+	}
+}
+
+@media only screen and (min-device-width: 992px) and (max-device-width: 1300px) {
+	.social-media {
+		font-size: 1.7rem;
+		margin: 0rem 0.5rem;
+	}
+}
+
+@media only screen and (min-device-width: 1300px) {
+	.social-media {
+		font-size: 1.8rem;
+		margin: 0rem 0.8rem;
+	}
 }

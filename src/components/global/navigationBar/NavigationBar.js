@@ -4,7 +4,6 @@ import styles from '../navigationBar/navigationBar.module.css';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import Links from '../../../constants/Links';
 import { v4 as uuidv4 } from 'uuid';
-import Img from 'gatsby-image';
 
 const query = graphql`
 	query {

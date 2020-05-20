@@ -42,7 +42,7 @@ export default function BlogPosts() {
 	const SectionInfo = data.allContentfulSectionTittles.nodes[1];
 	const { subtittle, tittle } = SectionInfo;
 	const blogPosts = data.allContentfulMyBlog.nodes;
-	console.log(blogPosts);
+
 	return (
 		<section className={styles.blog}>
 			<Tittle tittle={`${tittle} ✍️`} subtittle={`${subtittle}`} />
