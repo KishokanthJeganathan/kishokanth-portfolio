@@ -7,12 +7,6 @@ import globalstyles from '../../global/global.module.css';
 
 const query = graphql`
 	{
-		allContentfulSectionTittles {
-			nodes {
-				tittle
-				subtittle
-			}
-		}
 		allContentfulCta {
 			nodes {
 				text {
@@ -27,12 +21,15 @@ const query = graphql`
 				email
 			}
 		}
+		contentfulSectionTittles(sectionName: { eq: "hire" }) {
+			tittle
+		}
 	}
 `;
 
 export default function HireMe() {
 	const data = useStaticQuery(query);
-	const info = data.allContentfulSectionTittles.nodes[0];
+	const info = data.contentfulSectionTittles;
 	const { subtittle, tittle } = info;
 	const CTA = data.allContentfulCta.nodes[0].text.internal.content;
 

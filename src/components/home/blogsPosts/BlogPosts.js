@@ -28,18 +28,16 @@ const query = graphql`
 				nameOfProject
 			}
 		}
-		allContentfulSectionTittles {
-			nodes {
-				subtittle
-				tittle
-			}
+		contentfulSectionTittles(sectionName: { eq: "blog" }) {
+			subtittle
+			tittle
 		}
 	}
 `;
 
 export default function BlogPosts() {
 	const data = useStaticQuery(query);
-	const SectionInfo = data.allContentfulSectionTittles.nodes[1];
+	const SectionInfo = data.contentfulSectionTittles;
 	const { subtittle, tittle } = SectionInfo;
 	const blogPosts = data.allContentfulMyBlog.nodes;
 

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import addToMailchimp from 'gatsby-plugin-mailchimp';
 import globalstyles from '../../global/global.module.css';
 import styles from '../emailSubscriberForm/emailSubscriberForm.module.css';
+import { Col, Row } from 'react-bootstrap';
 
 export default function EmailSubscriberForm() {
 	const [ email, setEmail ] = useState('');
