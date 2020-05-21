@@ -8,6 +8,8 @@ import SyntaxHighlighter from 'react-syntax-highlighter';
 import { tomorrowNightEighties } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import Img from 'gatsby-image';
 import globalstyles from '../components/global/global.module.css';
+import SocialShare from '../components/global/SocialShare/SocialShare';
+import NewsletterForm from '../components/home/newsletterForm/NewsletterForm';
 
 export const query = graphql`
 	query($slug: String) {
@@ -76,6 +78,7 @@ export default function BlogTemplate({ data }) {
 	};
 
 	const { json } = data.contentfulMyBlog.richdata;
+	const url = 'https://medium.com/free-code-camp/how-to-animate-page-transitions-in-gatsby-js-b36e3ae14c29';
 
 	return (
 		<Layout>
@@ -90,6 +93,7 @@ export default function BlogTemplate({ data }) {
 					<Col xs={12} md={10} className={styles.content}>
 						{documentToReactComponents(json, options)}
 					</Col>
+					<SocialShare url={url} xs={9} md={4} />
 				</Row>
 			</Col>
 		</Layout>

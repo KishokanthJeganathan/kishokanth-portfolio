@@ -1,0 +1,16 @@
+.row {
+	display: flex;
+	justify-content: space-around;
+	height: 15vh;
+	align-items: center;
+}
+
+.CTA {
+	text-align: center;
+	margin-top: 1rem;
+}
+
+.CTA-text {
+	font-weight: 900;
+	font-size: 1.2rem;
+}
