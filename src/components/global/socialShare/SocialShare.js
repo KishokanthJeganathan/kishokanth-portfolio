@@ -23,9 +23,6 @@ export default function SocialShare({ xs, sm, md, url }) {
 						<LinkedinIcon size={32} round={true} />
 					</LinkedinShareButton>
 				</Col>
-				<Col xs={12} className={styles.CTA}>
-					<p className={styles.CTAText}>Like it? Share it 😊</p>
-				</Col>
 			</Row>
 		</Col>
 	);

@@ -31,6 +31,10 @@ blockquote {
 	padding-left: 2rem;
 }
 
+.borde {
+	border: 1px solid grey;
+}
+
 .img {
 	width: 100%;
 	margin-bottom: 1rem;

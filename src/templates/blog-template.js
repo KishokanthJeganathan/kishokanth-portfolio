@@ -3,13 +3,12 @@ import Layout from '../components/global/layout/Layout';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { Col, Row } from 'react-bootstrap';
 import styles from '../templates/blogTemplate.module.css';
-import { BLOCKS, MARKS, INLINES } from '@contentful/rich-text-types';
+import { MARKS, INLINES } from '@contentful/rich-text-types';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { tomorrowNightEighties } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import Img from 'gatsby-image';
-import globalstyles from '../components/global/global.module.css';
 import SocialShare from '../components/global/SocialShare/SocialShare';
-import NewsletterForm from '../components/home/newsletterForm/NewsletterForm';
+import EmailSubscriberForm from '../components/global/emailSubscriberForm/EmailSubscriberForm';
 
 export const query = graphql`
 	query($slug: String) {
@@ -93,7 +92,13 @@ export default function BlogTemplate({ data }) {
 					<Col xs={12} md={10} className={styles.content}>
 						{documentToReactComponents(json, options)}
 					</Col>
+
 					<SocialShare url={url} xs={9} md={4} />
+					<EmailSubscriberForm
+						CTA="Keen to read more? Subscribe to my future emails 😊"
+						bordercolor="2px solid black"
+						textAlign="center"
+					/>
 				</Row>
 			</Col>
 		</Layout>

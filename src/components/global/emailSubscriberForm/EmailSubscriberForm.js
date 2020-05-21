@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import addToMailchimp from 'gatsby-plugin-mailchimp';
 import globalstyles from '../../global/global.module.css';
 import styles from '../emailSubscriberForm/emailSubscriberForm.module.css';
-import { Col, Row } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
 
-export default function EmailSubscriberForm() {
+export default function EmailSubscriberForm({ CTA, bordercolor, textAlign }) {
 	const [ email, setEmail ] = useState('');
 	const [ checkbox, setCheckbox ] = useState(false);
 	const [ submissionMessege, setSubmissionMessege ] = useState('');
@@ -36,23 +36,24 @@ export default function EmailSubscriberForm() {
 		}
 	};
 	return (
-		<Col xs={12}>
+		<Col xs={12} style={{ textAlign: `${textAlign}` }}>
 			{submissionMessege}
 			{!submissionSuccesful && (
 				<span>
 					<form onSubmit={handleSubmit}>
 						<label htmlFor="email address" className={styles.label}>
-							<p className={globalstyles.p2}>Where can I reach you?</p>
+							<p className={globalstyles.p2}>{CTA}</p>
 						</label>
 						<input
 							type="email"
 							value={email}
 							onChange={(e) => setEmail(e.target.value)}
 							className={styles.input}
+							style={{ borderBottom: `${bordercolor}` }}
 						/>
 					</form>
 
-					<span className={styles.checkbox}>
+					<span className={styles.checkbox} style={{ justifyContent: `${textAlign}` }}>
 						<input
 							type="checkbox"
 							onChange={() => setCheckbox(!checkbox)}
@@ -67,6 +68,7 @@ export default function EmailSubscriberForm() {
 							</p>
 						</label>
 					</span>
+
 					<button onClick={handleSubmit} className={styles.button}>
 						Sign Up
 					</button>

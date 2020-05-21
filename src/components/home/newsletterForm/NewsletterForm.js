@@ -22,7 +22,7 @@ export default function NewsletterForm() {
 		<Col xs={12} className={styles.newsletterForm}>
 			<Row>
 				<Tittle tittle={`${tittle} 🔥`} subtittle={`${subtittle}`} />
-				<EmailSubscriberForm />
+				<EmailSubscriberForm CTA="Where can I find you?" bordercolor="2px solid white" />
 			</Row>
 		</Col>
 	);
