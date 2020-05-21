@@ -4,6 +4,8 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { Col, Row } from 'react-bootstrap';
 import styles from '../templates/blogTemplate.module.css';
 import { BLOCKS, MARKS } from '@contentful/rich-text-types';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { tomorrowNightEighties } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 export const query = graphql`
 	query($slug: String) {
@@ -29,13 +31,19 @@ export const query = graphql`
 `;
 
 const Bold = ({ children }) => <p className={styles.bold}>{children}</p>;
+const Code = ({ children }) => (
+	<SyntaxHighlighter style={tomorrowNightEighties} className={styles.code}>
+		{children}
+	</SyntaxHighlighter>
+);
 
 export default function BlogTemplate({ data }) {
 	console.log(data);
 
 	const options = {
 		renderMark: {
-			[MARKS.BOLD]: (text) => <Bold>{text}</Bold>
+			[MARKS.BOLD]: (text) => <Bold>{text}</Bold>,
+			[MARKS.CODE]: (text) => <Code>{text}</Code>
 		},
 		renderText: (text) => text.replace('!', '?'),
 		renderNode: {
