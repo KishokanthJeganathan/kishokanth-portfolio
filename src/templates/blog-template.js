@@ -6,6 +6,8 @@ import styles from '../templates/blogTemplate.module.css';
 import { BLOCKS, MARKS, INLINES } from '@contentful/rich-text-types';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { tomorrowNightEighties } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import Img from 'gatsby-image';
+import globalstyles from '../components/global/global.module.css';
 
 export const query = graphql`
 	query($slug: String) {
@@ -20,7 +22,7 @@ export const query = graphql`
 			}
 			headerimage {
 				fluid {
-					src
+					...GatsbyContentfulFluid
 				}
 			}
 			richdata {
@@ -51,7 +53,13 @@ export default function BlogTemplate({ data }) {
 		renderText: (text) => text.replace('!', '?'),
 		renderNode: {
 			'embedded-asset-block': (node) => {
-				return <img src={node.data.target.fields.file['en-US'].url} className={styles.img} />;
+				return (
+					<img
+						src={node.data.target.fields.file['en-US'].url}
+						className={styles.img}
+						alt={node.data.target.fields.title['en-US']}
+					/>
+				);
 			},
 			[INLINES.HYPERLINK]: (node) => {
 				return (
@@ -68,11 +76,18 @@ export default function BlogTemplate({ data }) {
 	};
 
 	const { json } = data.contentfulMyBlog.richdata;
+
 	return (
 		<Layout>
 			<Col>
 				<Row className={styles.row}>
-					<Col xs={12} md={10}>
+					<Col xs={12} md={10} className={styles.image}>
+						<Img fluid={data.contentfulMyBlog.headerimage.fluid} />
+						<h1 className={styles.h1}>{data.contentfulMyBlog.nameOfProject}</h1>
+						<p className={styles.publishedDate}>{`Published on ${data.contentfulMyBlog.published}`}</p>
+						<p>{`${data.contentfulMyBlog.readingTime} min read`}</p>
+					</Col>
+					<Col xs={12} md={10} className={styles.content}>
 						{documentToReactComponents(json, options)}
 					</Col>
 				</Row>
