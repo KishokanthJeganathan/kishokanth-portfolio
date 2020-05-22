@@ -6,12 +6,10 @@ import styles from '../layout/layout.module.css';
 
 export default function Layout({ children }) {
 	return (
-		<main>
-			<Container className={styles.layout}>
-				<NavigationBar />
-				{children}
-				<Footer />
-			</Container>
-		</main>
+		<Container className={styles.layout}>
+			<NavigationBar />
+			{children}
+			<Footer />
+		</Container>
 	);
 }

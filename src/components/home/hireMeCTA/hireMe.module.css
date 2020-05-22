@@ -1,10 +1,12 @@
-.hire-me {
+/* .hire-me {
 	background-color: rgba(206, 206, 206, 0.596);
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
 	padding: 1rem;
 	margin-top: 3rem;
+	margin-right: 0;
+	margin-left: 0;
 }
 
 .CTA {
@@ -54,5 +56,69 @@
 @media only screen and (min-device-width: 1300px) {
 	.hire-me {
 		min-height: 50vh;
+	}
+} */
+
+.hire-me {
+	margin-top: 3rem;
+	background-color: rgba(206, 206, 206, 0.596);
+	width: 100%;
+	display: block;
+	padding: 1rem;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.CTA {
+	font-size: 1.2rem;
+}
+
+.hire-CTA {
+	color: rgb(253, 182, 49);
+	padding-left: 0.5rem;
+}
+
+.hire-CTA:hover {
+	color: rgb(253, 182, 49);
+}
+
+.hire-me-blog-post {
+	color: rgb(253, 182, 49);
+	padding: 0rem 0.5rem;
+}
+
+.hire-me-blog-post:hover {
+	color: rgb(253, 182, 49);
+}
+
+@media only screen and (max-device-width: 576px) {
+	.hire-me {
+		min-height: 70vh;
+	}
+}
+@media only screen and (min-device-width: 577px) and (max-device-width: 768px) {
+	.hire-me {
+		min-height: 70vh;
+	}
+}
+@media only screen and (min-device-width: 769px) and (max-device-width: 992px) {
+	.hire-me {
+		min-height: 50vh;
+		padding-right: 15%;
+	}
+}
+
+@media only screen and (min-device-width: 992px) and (max-device-width: 1300px) {
+	.hire-me {
+		min-height: 40vh;
+		padding-right: 15%;
+	}
+}
+
+@media only screen and (min-device-width: 1300px) {
+	.hire-me {
+		min-height: 50vh;
+		padding-right: 15%;
 	}
 }
