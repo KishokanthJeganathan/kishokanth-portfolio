@@ -1,148 +1,30 @@
 .newsletterForm {
 	margin-top: 4rem;
 	min-height: 60vh;
-	background-color: rgba(206, 206, 206, 0.596);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-}
-
-.label {
-	display: block;
-}
-
-.button {
-	margin-top: 0.5rem;
-	color: rgb(253, 182, 49);
-	padding: 0.3rem 1rem;
-	border: 1px solid rgb(253, 182, 49);
-	border-radius: 2rem;
-	transition: color 0.8s;
-	background-color: white;
-}
-
-.button:hover {
-	background-color: rgb(253, 182, 49);
-	color: white;
-	text-decoration: none;
-}
-
-.input {
-	width: 30vw;
-	background-color: transparent;
-	border: none;
-	border-bottom: 2px solid white;
-}
-
-.checkbox {
-	margin-top: 1rem;
-	display: flex;
-}
-
-.disclaimer {
-	padding: 0;
-	padding-left: 0.5rem;
-	margin-top: -0.2rem;
-	margin-bottom: 0;
-	width: 50vw;
-}
-
-.label {
-	margin: 0;
-}
-
-.failure {
-	color: red;
-}
-
-.success {
-	color: green;
-}
-
-.checkbox-reminder {
-	padding-bottom: 0.3rem;
+	background-color: rgba(206, 206, 206, 0.596);
 }
 
 @media only screen and (max-device-width: 576px) {
 	.newsletterForm {
 		min-height: 90vh;
 	}
-
-	.disclaimer {
-		width: 80vw;
-	}
-
-	.input {
-		width: 80vw;
-	}
-
-	.button {
-		margin-left: 1rem;
-	}
 }
 @media only screen and (min-device-width: 577px) and (max-device-width: 768px) {
 	.newsletterForm {
 		min-height: 70vh;
 	}
-
-	.disclaimer {
-		width: 60vw;
-	}
-
-	.input {
-		width: 60vw;
-	}
-	.button {
-		margin-left: 1rem;
-	}
 }
-@media only screen and (min-device-width: 769px) and (max-device-width: 992px) {
+@media only screen and (min-device-width: 769px) and (max-device-width: 1300px) {
 	.newsletterForm {
 		min-height: 60vh;
-	}
-
-	.disclaimer {
-		width: 60vw;
-	}
-
-	.input {
-		width: 50vw;
-	}
-	.button {
-		margin-left: 1rem;
-	}
-}
-
-@media only screen and (min-device-width: 992px) and (max-device-width: 1300px) {
-	.newsletterForm {
-		min-height: 60vh;
-	}
-
-	.disclaimer {
-		width: 50vw;
-	}
-
-	.input {
-		width: 50vw;
-	}
-	.button {
-		margin-left: 1rem;
 	}
 }
 
 @media only screen and (min-device-width: 1300px) {
 	.newsletterForm {
 		min-height: 50vh;
-	}
-
-	.disclaimer {
-		width: 50vw;
-	}
-
-	.input {
-		width: 50vw;
-	}
-	.button {
-		margin-left: 1rem;
 	}
 }

@@ -19,11 +19,11 @@ export default function NewsletterForm() {
 	const { tittle, subtittle } = data.contentfulSectionTittles;
 
 	return (
-		<Col xs={12} className={styles.newsletterForm}>
-			<Row>
+		<Col xs={12}>
+			<span className={styles.newsletterForm}>
 				<Tittle tittle={`${tittle} 🔥`} subtittle={`${subtittle}`} />
 				<EmailSubscriberForm CTA="Where can I find you?" bordercolor="2px solid white" />
-			</Row>
+			</span>
 		</Col>
 	);
 }
