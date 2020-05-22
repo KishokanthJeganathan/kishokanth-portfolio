@@ -25,17 +25,15 @@ const query = graphql`
 				}
 			}
 		}
-		allContentfulSectionTittles {
-			nodes {
-				tittle
-				subtittle
-			}
+		contentfulSectionTittles(sectionName: { eq: "blog" }) {
+			subtittle
+			tittle
 		}
 	}
 `;
 export default function Blog() {
 	const data = useStaticQuery(query);
-	const tittleData = data.allContentfulSectionTittles.nodes[1];
+	const tittleData = data.contentfulSectionTittles;
 	const { tittle, subtittle } = tittleData;
 	const blogPosts = data.allContentfulMyBlog.nodes;
 	return (

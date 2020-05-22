@@ -6,6 +6,7 @@ import { Row } from 'react-bootstrap';
 import BlogPost from '../components/global/blogPost/BlogPost';
 import { v4 as uuidv4 } from 'uuid';
 import HireMe from '../components/home/hireMeCTA/HireMe';
+import ContentHolder from '../components/global/contentHolder/ContentHolder';
 
 const query = graphql`
 	query {
@@ -25,18 +26,16 @@ const query = graphql`
 				}
 			}
 		}
-		allContentfulSectionTittles {
-			nodes {
-				tittle
-				subtittle
-			}
+		contentfulSectionTittles(sectionName: { eq: "portfolio" }) {
+			subtittle
+			tittle
 		}
 	}
 `;
 
 export default function Portfolio() {
 	const data = useStaticQuery(query);
-	const tittleData = data.allContentfulSectionTittles.nodes[2];
+	const tittleData = data.contentfulSectionTittles;
 	const { tittle, subtittle } = tittleData;
 	const projects = data.allContentfulMyPortfolio.nodes;
 	return (
@@ -44,7 +43,7 @@ export default function Portfolio() {
 			<PageTittle tittle={`${tittle} 🙌`} subtittle={`${subtittle}`} />
 			<Row>
 				{projects.map((project) => (
-					<BlogPost
+					<ContentHolder
 						xs="12"
 						sm="6"
 						key={uuidv4()}
@@ -55,6 +54,7 @@ export default function Portfolio() {
 					/>
 				))}
 			</Row>
+
 			<HireMe />
 		</Layout>
 	);

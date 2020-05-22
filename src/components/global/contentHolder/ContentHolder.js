@@ -14,7 +14,7 @@ export default function ContentHolder({ xs, sm, md, lg, nameOfProject, src, intr
 				<h3 className={globalstyles.h3}> {nameOfProject}</h3>
 				<p className={globalstyles.p2}>{intro}</p>
 				<Link to={`/portfolio/${slug}`} className={styles.readMore}>
-					Read Casestudy <IoIosArrowForward />
+					Read casestudy <IoIosArrowForward />
 				</Link>
 			</div>
 		</Col>

@@ -14,7 +14,7 @@ export default function BlogPost({ xs, sm, md, lg, nameOfProject, src, intro, sl
 				<h3 className={globalstyles.h3}> {nameOfProject}</h3>
 				<p className={globalstyles.p2}>{intro}</p>
 				<Link to={`/blog/${slug}`} className={styles.readMore}>
-					Read Casestudy <IoIosArrowForward />
+					Read post <IoIosArrowForward />
 				</Link>
 			</div>
 		</Col>
