@@ -130,7 +130,25 @@ export default function caseStudy({ data }) {
 	console.log(data);
 	return (
 		<Layout>
-			<Row>kk</Row>
+			<Row>
+				<Col xs={11} md={9} className={styles.intro}>
+					<h1 className={styles.h1}>{nameOfProject}</h1>
+				</Col>
+				<Col xs={12}>
+					<Row>
+						<Col xs={12} md={6}>
+							<p>Scope of Work: {scopeOfWork.scopeOfWork}</p>
+						</Col>
+						<Col xs={12} md={6}>
+							<p> Stack: {stacksInvolved.stacksInvolved}</p>
+						</Col>
+					</Row>
+				</Col>
+				<Col xs={12}>
+					<Img fluid={portfolioCoverImage.fluid} />
+				</Col>
+				<TextHolder h1={heading1} p={content1.content1} xs="12" md="10" />
+			</Row>
 		</Layout>
 	);
 }
