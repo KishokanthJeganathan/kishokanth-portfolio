@@ -6,6 +6,7 @@ import BlogPost from '../components/global/blogPost/BlogPost';
 import { Row } from 'react-bootstrap';
 import PageTittle from '../components/global/pageTittle/PageTittle';
 import NewsletterForm from '../components/home/newsletterForm/NewsletterForm';
+import SEO from '../components/global/seo';
 
 const query = graphql`
 	query {
@@ -38,6 +39,7 @@ export default function Blog() {
 	const blogPosts = data.allContentfulMyBlog.nodes;
 	return (
 		<Layout>
+			<SEO title="Blog" image="https://kapwi.ng/c/RH3GfiaR" />
 			<PageTittle tittle={`${tittle} ✍️`} subtittle={`${subtittle}`} />
 			<Row>
 				{blogPosts.map((project) => (
