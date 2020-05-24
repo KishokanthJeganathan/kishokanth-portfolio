@@ -6,7 +6,6 @@ import { graphql, useStaticQuery, Link } from 'gatsby';
 import { v4 as uuidv4 } from 'uuid';
 import styles from '../portfolio/portfolio.module.css';
 import globalstyles from '../../global/global.module.css';
-import { FaLongArrowAltRight } from 'react-icons/Fa';
 
 const query = graphql`
 	{
@@ -60,9 +59,7 @@ export default function Portfolio() {
 			</Col>
 			<Col>
 				<Link className={styles.link}>
-					<span className={globalstyles.p1}>
-						See More Projects <FaLongArrowAltRight />
-					</span>
+					<span className={globalstyles.p1}>See More Projects</span>
 				</Link>
 			</Col>
 		</section>

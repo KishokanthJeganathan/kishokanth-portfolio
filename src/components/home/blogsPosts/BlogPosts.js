@@ -6,7 +6,6 @@ import styles from '../blogsPosts/blogPosts.module.css';
 import { v4 as uuidv4 } from 'uuid';
 import BlogPost from '../../global/blogPost/BlogPost';
 import globalstyles from '../../global/global.module.css';
-import { FaLongArrowAltRight } from 'react-icons/Fa';
 
 const query = graphql`
 	{
@@ -60,9 +59,7 @@ export default function BlogPosts() {
 					))}
 					<Col>
 						<Link className={styles.link}>
-							<span className={globalstyles.p1}>
-								See More Projects <FaLongArrowAltRight />
-							</span>
+							<span className={globalstyles.p1}>See More Projects</span>
 						</Link>
 					</Col>
 				</Row>
