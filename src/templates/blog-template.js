@@ -95,7 +95,7 @@ export default function BlogTemplate({ data }) {
 						{documentToReactComponents(json, options)}
 					</Col>
 
-					<SocialShare url={url} xs={9} md={4} />
+					{/* <SocialShare url={url} xs={9} md={4} /> */}
 					<EmailSubscriberForm
 						CTA="Keen to read more? Subscribe to my future emails 😊"
 						bordercolor="2px solid black"
