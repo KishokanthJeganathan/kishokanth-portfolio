@@ -2,6 +2,10 @@
 	margin-top: 3rem;
 }
 
+.project-details p {
+	margin-bottom: 0.4rem;
+}
+
 .h1 {
 	font-size: 2rem;
 }
@@ -24,6 +28,66 @@
 
 .p2 {
 	font-size: 1.2rem;
+}
+
+.heading-p {
+	font-size: 1.4rem;
+	color: grey;
+}
+
+.content-p-lg {
+	font-size: 1.1rem;
+}
+
+.content-p-sm {
+	color: grey;
+}
+
+.content-1-holder,
+.quote-holder {
+	margin-top: 2rem;
+}
+
+.content-2-holder,
+.content-4-holder {
+	background-color: #f3f3f3;
+}
+
+.content-1-holder,
+.content-2-holder,
+.quote-holder {
+	display: flex;
+	justify-content: center;
+}
+
+.quote-sign {
+	color: rgb(253, 182, 49);
+	font-size: 2rem;
+}
+
+.quote-provider-details {
+	display: flex;
+}
+
+.quote-holder img {
+	height: 3rem;
+	width: 3rem;
+	border-radius: 50%;
+}
+
+.quote-provider-details p {
+	margin: 0;
+	margin-left: 0.5rem;
+}
+
+.Cta-holder {
+	padding: 0;
+	margin-top: 4rem;
+	text-align: center;
+}
+
+.background {
+	height: 30vh;
 }
 
 @media only screen and (max-device-width: 576px) {

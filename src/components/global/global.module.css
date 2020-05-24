@@ -22,11 +22,22 @@
 	font-size: 1.2rem;
 }
 
+.p3 {
+	font-size: 1.2rem;
+	color: grey;
+}
+
 @media only screen and (max-device-width: 576px) {
 }
 @media only screen and (min-device-width: 577px) and (max-device-width: 768px) {
+	.p3 {
+		font-size: 1rem;
+	}
 }
 @media only screen and (min-device-width: 769px) and (max-device-width: 992px) {
+	.p3 {
+		font-size: 1rem;
+	}
 }
 
 @media only screen and (min-device-width: 992px) and (max-device-width: 1300px) {
@@ -39,5 +50,9 @@
 
 	.p {
 		font-size: 1.8rem;
+	}
+
+	.p3 {
+		font-size: 1.4rem;
 	}
 }
