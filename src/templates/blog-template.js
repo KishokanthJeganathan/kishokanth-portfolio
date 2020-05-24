@@ -3,7 +3,7 @@ import Layout from '../components/global/layout/Layout';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { Col, Row } from 'react-bootstrap';
 import styles from '../templates/blogTemplate.module.css';
-import { MARKS, INLINES } from '@contentful/rich-text-types';
+import { MARKS, INLINES, BLOCKS } from '@contentful/rich-text-types';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { tomorrowNightEighties } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import Img from 'gatsby-image';
@@ -36,6 +36,7 @@ export const query = graphql`
 const website_url = 'http://localhost:8000/';
 
 const Bold = ({ children }) => <p className={styles.bold}>{children}</p>;
+const Text = ({ children }) => <p className={styles.p}>{children}</p>;
 
 const Code = ({ children }) => (
 	<SyntaxHighlighter style={tomorrowNightEighties} className={styles.code}>
@@ -53,6 +54,7 @@ export default function BlogTemplate({ data }) {
 		},
 		renderText: (text) => text.replace('!', '?'),
 		renderNode: {
+			[BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
 			'embedded-asset-block': (node) => {
 				return (
 					<img
@@ -87,7 +89,7 @@ export default function BlogTemplate({ data }) {
 						<Img fluid={data.contentfulMyBlog.headerimage.fluid} />
 						<h1 className={styles.h1}>{data.contentfulMyBlog.nameOfProject}</h1>
 						<p className={styles.publishedDate}>{`Published on ${data.contentfulMyBlog.published}`}</p>
-						<p>{`${data.contentfulMyBlog.readingTime} min read`}</p>
+						<p className={styles.readingTime}>{`${data.contentfulMyBlog.readingTime} min read`}</p>
 					</Col>
 					<Col xs={12} md={10} className={styles.content}>
 						{documentToReactComponents(json, options)}

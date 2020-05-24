@@ -22,17 +22,15 @@ a:hover {
 	margin-top: 1rem;
 }
 
-.published-date {
+.published-date,
+.reading-time {
 	margin: 0;
+	color: grey;
 }
 
 blockquote {
-	border-left: 5px solid grey;
+	border-left: 5px solid rgb(0, 0, 0);
 	padding-left: 2rem;
-}
-
-.borde {
-	border: 1px solid grey;
 }
 
 .img {
@@ -41,6 +39,11 @@ blockquote {
 	-webkit-box-shadow: 8px 9px 13px -5px rgba(0, 0, 0, 0.75);
 	-moz-box-shadow: 8px 9px 13px -5px rgba(0, 0, 0, 0.75);
 	box-shadow: 8px 9px 13px -5px rgba(0, 0, 0, 0.75);
+}
+
+.p {
+	font-size: 1.1rem;
+	color: grey;
 }
 
 @media only screen and (max-device-width: 576px) {
