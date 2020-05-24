@@ -9,6 +9,7 @@ import Img from 'gatsby-image';
 import globalstyles from '../components/global/global.module.css';
 
 import Layout from '../components/global/layout/Layout';
+import BackgroundCta from '../components/casestudy/backgroundCta/BackgroundCta';
 
 export const query = graphql`
 	query($slug: String) {
@@ -153,7 +154,7 @@ export default function caseStudy({ data }) {
 						</Col>
 					</Row>
 				</Col>
-				<Col xs={12}>
+				<Col xs={12} className={styles.portfolioCoverImage}>
 					<Img fluid={portfolioCoverImage.fluid} />
 				</Col>
 				<Col xs={12} className={styles.content1Holder}>
@@ -194,13 +195,17 @@ export default function caseStudy({ data }) {
 					</Col>
 				</Row>
 			</Col>
-			<Col className={styles.CtaHolder}>
-				<BackgroundImage fluid={portfolioCoverImage.fluid} className={styles.background}>
-					<p>Looking to for a website to increase your business turnover, fast?</p>
-					<a href="mailto:hello@kishokanth.com" className={styles.emailAddress}>
-						Let's talk!
-					</a>
-				</BackgroundImage>
+			<Col className={styles.ctaHolder}>
+				<BackgroundCta fluid={portfolioCoverImage.fluid} height="25vh">
+					<div className={styles.ctaContent}>
+						<p className={styles.ctaQuestion}>
+							Looking to for a website to increase your business turnover, fast?
+						</p>
+						<a href="mailto:hello@kishokanth.com" className={styles.button}>
+							Let's talk!
+						</a>
+					</div>
+				</BackgroundCta>
 			</Col>
 		</Layout>
 	);

@@ -43,6 +43,7 @@
 	color: grey;
 }
 
+.portfolio-cover-image,
 .content-1-holder,
 .quote-holder {
 	margin-top: 2rem;
@@ -80,24 +81,69 @@
 	margin-left: 0.5rem;
 }
 
-.Cta-holder {
-	padding: 0;
+.cta-holder {
 	margin-top: 4rem;
-	text-align: center;
+	padding: 0;
 }
 
-.background {
-	height: 30vh;
+.cta-content {
+	height: 25vh;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	padding: 1rem;
+	text-align: center;
+	background-color: rgba(128, 128, 128, 0.651);
+}
+
+.cta-question {
+	color: white;
+	font-size: 1.6rem;
+	width: 40vw;
+	font-weight: 900;
+}
+
+.button {
+	background-color: rgb(253, 182, 49);
+	color: white;
+	padding: 0.4rem 1rem;
+	border: 1px solid rgb(253, 182, 49);
+	border-radius: 2rem;
+	transition: color 0.8s;
+}
+
+.button:hover {
+	background-color: rgb(253, 182, 49);
+	color: white;
+	text-decoration: none;
+}
+
+.button:hover {
+	background-color: white;
+	color: rgb(253, 182, 49);
 }
 
 @media only screen and (max-device-width: 576px) {
+	.cta-question {
+		width: 90vw;
+	}
 }
 @media only screen and (min-device-width: 577px) and (max-device-width: 768px) {
+	.cta-question {
+		width: 70vw;
+	}
 }
 @media only screen and (min-device-width: 769px) and (max-device-width: 992px) {
+	.cta-question {
+		width: 70vw;
+	}
 }
 
 @media only screen and (min-device-width: 992px) and (max-device-width: 1300px) {
+	.cta-question {
+		width: 70vw;
+	}
 }
 
 @media only screen and (min-device-width: 1300px) {
