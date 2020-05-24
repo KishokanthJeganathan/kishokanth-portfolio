@@ -7,7 +7,6 @@ import { MARKS, INLINES, BLOCKS } from '@contentful/rich-text-types';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { tomorrowNightEighties } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import Img from 'gatsby-image';
-import SocialShare from '../components/global/SocialShare/SocialShare';
 import EmailSubscriberForm from '../components/global/emailSubscriberForm/EmailSubscriberForm';
 
 export const query = graphql`
@@ -95,7 +94,6 @@ export default function BlogTemplate({ data }) {
 						{documentToReactComponents(json, options)}
 					</Col>
 
-					{/* <SocialShare url={url} xs={9} md={4} /> */}
 					<EmailSubscriberForm
 						CTA="Keen to read more? Subscribe to my future emails 😊"
 						bordercolor="2px solid black"
