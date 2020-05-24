@@ -25,7 +25,13 @@ export default function NavigationBar() {
 	const data = useStaticQuery(query);
 	const { name, tittle, picture } = data.allContentfulProfile.nodes[0];
 	return (
-		<Navbar collapseOnSelect sticky="top" expand="md" className={styles.NavigationBar}>
+		<Navbar
+			collapseOnSelect
+			sticky="top"
+			expand="md"
+			className={styles.NavigationBar}
+			style={{ backgroundColor: 'white' }}
+		>
 			<Navbar.Brand href="#home">
 				<div className={styles.authorDetails}>
 					<img src={picture.fluid.src} className={styles.img} alt={picture.title} />
