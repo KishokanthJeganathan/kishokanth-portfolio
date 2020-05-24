@@ -1,6 +1,12 @@
 import React from 'react';
-import { FacebookShareButton, LinkedinShareButton, TwitterShareButton } from 'react-share';
-import { FacebookIcon, LinkedinIcon, TwitterIcon } from 'react-share';
+import {
+	FacebookShareButton,
+	LinkedinShareButton,
+	TwitterShareButton,
+	FacebookIcon,
+	LinkedinIcon,
+	TwitterIcon
+} from 'react-share';
 import { Col, Row } from 'react-bootstrap';
 import styles from '../socialShare/socialShare.module.css';
 
