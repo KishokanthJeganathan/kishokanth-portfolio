@@ -15,6 +15,11 @@ export const query = graphql`
 	query($slug: String) {
 		contentfulMyPortfolio(slug: { eq: $slug }) {
 			nameOfProject
+			ctaText {
+				internal {
+					content
+				}
+			}
 			projectIntro {
 				projectIntro
 			}
@@ -39,12 +44,6 @@ export const query = graphql`
 			}
 			content4 {
 				content4
-			}
-			image1 {
-				fluid {
-					...GatsbyContentfulFluid
-				}
-				title
 			}
 			image2 {
 				fluid {
@@ -81,15 +80,6 @@ export const query = graphql`
 			stacksInvolved {
 				stacksInvolved
 			}
-			linkToFinalProduct {
-				linkToFinalProduct
-			}
-			cta {
-				fluid {
-					...GatsbyContentfulFluid
-				}
-				title
-			}
 			portfolioCoverImage {
 				fluid {
 					...GatsbyContentfulFluid
@@ -106,17 +96,13 @@ export default function caseStudy({ data }) {
 		content2,
 		content3,
 		content4,
-		cta,
-		headerimage,
 		heading1,
 		heading2,
 		heading3,
 		heading4,
-		image1,
 		image2,
 		image3,
 		image4,
-		linkToFinalProduct,
 		nameOfProject,
 		portfolioCoverImage,
 		projectIntro,
@@ -125,14 +111,15 @@ export default function caseStudy({ data }) {
 		quoteImage,
 		quoteName,
 		scopeOfWork,
-		stacksInvolved
+		stacksInvolved,
+		ctaText
 	} = data.contentfulMyPortfolio;
 
 	console.log(data);
 	return (
 		<Layout>
 			<Row>
-				<Col xs={12} md={7} className={styles.intro}>
+				<Col xs={12} md={9} lg={6} className={styles.intro}>
 					<h1 className={styles.h1}>{nameOfProject}</h1>
 					<p className={styles.headingP}>{projectIntro.projectIntro}</p>
 				</Col>
@@ -155,28 +142,36 @@ export default function caseStudy({ data }) {
 					</Row>
 				</Col>
 				<Col xs={12} className={styles.portfolioCoverImage}>
-					<Img fluid={portfolioCoverImage.fluid} />
+					<Img fluid={portfolioCoverImage.fluid} alt={portfolioCoverImage.title} />
 				</Col>
 				<Col xs={12} className={styles.content1Holder}>
 					<TextHolder h2={heading1} p={content1.content1} xs="12" md="8" pcolor="grey" />
 				</Col>
 			</Row>
 			<Col className={styles.content2Holder} xs={12}>
-				<Row>
-					<ImageHolder src={image2.fluid} xs="12" md="5" />
+				<Row className={styles.contentHolderMd}>
+					<ImageHolder src={image2.fluid} xs="12" md="5" alt={image2.title} />
 					<TextHolder h2={heading2} p={content2.content2} xs="12" md="7" pcolor="grey" />
+				</Row>
+				<Row className={styles.contentHolderSm}>
+					<TextHolder h2={heading2} p={content2.content2} xs="12" md="7" pcolor="grey" />
+					<ImageHolder src={image2.fluid} xs="12" md="5" alt={image2.title} />
 				</Row>
 			</Col>
 			<Col className={styles.content3Holder} xs={12}>
 				<Row>
 					<TextHolder h2={heading3} p={content3.content3} xs="12" md="7" pcolor="grey" />
-					<ImageHolder src={image3.fluid} xs="12" md="5" />
+					<ImageHolder src={image3.fluid} xs="12" md="5" alt={image3.title} />
 				</Row>
 			</Col>
 			<Col className={styles.content4Holder} xs={12}>
-				<Row>
-					<ImageHolder src={image4.fluid} xs="12" md="5" />
+				<Row className={styles.contentHolderMd}>
+					<ImageHolder src={image4.fluid} xs="12" md="5" alt={image4.title} />
 					<TextHolder h2={heading4} p={content4.content4} xs="12" md="7" pcolor="grey" />
+				</Row>
+				<Row className={styles.contentHolderSm}>
+					<TextHolder h2={heading4} p={content4.content4} xs="12" md="7" pcolor="grey" />
+					<ImageHolder src={image4.fluid} xs="12" md="5" alt={image4.title} />
 				</Row>
 			</Col>
 			<Col xs={12}>
@@ -186,7 +181,7 @@ export default function caseStudy({ data }) {
 						<p className={globalstyles.p3}>{quote.quote}</p>
 
 						<div className={styles.quoteProviderDetails}>
-							<img src={quoteImage.fluid.src} alt={quoteImage.fluid.tittle} />
+							<img src={quoteImage.fluid.src} alt={quoteImage.portfolioCoverImagetittle} />
 							<div>
 								<p className={styles.contentPSm}>{quoteName}</p>
 								<p className={styles.contentPSm}>{quoteGiverTittle}</p>
@@ -198,9 +193,7 @@ export default function caseStudy({ data }) {
 			<Col className={styles.ctaHolder}>
 				<BackgroundCta fluid={portfolioCoverImage.fluid} height="25vh">
 					<div className={styles.ctaContent}>
-						<p className={styles.ctaQuestion}>
-							Looking to for a website to increase your business turnover, fast?
-						</p>
+						<p className={styles.ctaQuestion}>{ctaText.internal.content}</p>
 						<a href="mailto:hello@kishokanth.com" className={styles.button}>
 							Let's talk!
 						</a>

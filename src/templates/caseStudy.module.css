@@ -43,8 +43,10 @@
 	color: grey;
 }
 
+.content-1-holder {
+	margin: 2rem 0rem;
+}
 .portfolio-cover-image,
-.content-1-holder,
 .quote-holder {
 	margin-top: 2rem;
 }
@@ -128,21 +130,35 @@
 	.cta-question {
 		width: 90vw;
 	}
+	.content-holder-md {
+		display: none;
+	}
 }
 @media only screen and (min-device-width: 577px) and (max-device-width: 768px) {
 	.cta-question {
 		width: 70vw;
+	}
+
+	.content-holder-md {
+		display: none;
 	}
 }
 @media only screen and (min-device-width: 769px) and (max-device-width: 992px) {
 	.cta-question {
 		width: 70vw;
 	}
+
+	.content-holder-sm {
+		display: none;
+	}
 }
 
 @media only screen and (min-device-width: 992px) and (max-device-width: 1300px) {
 	.cta-question {
 		width: 70vw;
+	}
+	.content-holder-sm {
+		display: none;
 	}
 }
 
@@ -153,5 +169,8 @@
 
 	.p {
 		font-size: 1.8rem;
+	}
+	.content-holder-sm {
+		display: none;
 	}
 }
