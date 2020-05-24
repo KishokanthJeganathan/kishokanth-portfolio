@@ -9,7 +9,7 @@ import NewsletterForm from '../components/home/newsletterForm/NewsletterForm';
 import SEO from '../components/global/seo';
 
 const query = graphql`
-	query {
+	{
 		allContentfulMyBlog {
 			nodes {
 				slug
@@ -30,6 +30,14 @@ const query = graphql`
 			subtittle
 			tittle
 		}
+		contentfulMetas(tittle: { eq: "Blog" }) {
+			description
+			image {
+				fixed {
+					src
+				}
+			}
+		}
 	}
 `;
 export default function Blog() {
@@ -37,9 +45,14 @@ export default function Blog() {
 	const tittleData = data.contentfulSectionTittles;
 	const { tittle, subtittle } = tittleData;
 	const blogPosts = data.allContentfulMyBlog.nodes;
+	console.log(data);
 	return (
 		<Layout>
-			<SEO title="Blog" image="https://kapwi.ng/c/RH3GfiaR" />
+			<SEO
+				title="Blog"
+				description={data.contentfulMetas.description}
+				image={data.contentfulMetas.image.fixed.src}
+			/>
 			<PageTittle tittle={`${tittle} ✍️`} subtittle={`${subtittle}`} />
 			<Row>
 				{blogPosts.map((project) => (
