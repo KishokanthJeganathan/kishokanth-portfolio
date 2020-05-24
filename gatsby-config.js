@@ -8,10 +8,10 @@ module.exports = {
 	/* Your site config here */
 	siteMetadata: {
 		title: 'Kishokanth.com',
-		titleTemplate: '%s · Kishokanth.com',
+		titleTemplate: '%s | Kishokanth.com',
 		description:
 			'Welcome to my portfolio where I showcase my web development work and write article with tips on front-end development',
-		siteUrl: 'https://relaxed-lalande-6a9cb4.netlify.app', // No trailing slash allowed!
+		url: 'https://relaxed-lalande-6a9cb4.netlify.app', // No trailing slash allowed!
 		image: '/Image.jpg', // Path to your image you placed in the 'static' folder
 		twitterUsername: '@kishojegan',
 		author: 'Kishokanth Jeganathan'
