@@ -4,7 +4,6 @@ import { Link } from 'gatsby';
 import Img from 'gatsby-image';
 import styles from '../../global/blogPost/blogPost.module.css';
 import globalstyles from '../../global/global.module.css';
-import { IoIosArrowForward } from 'react-icons/Io';
 
 export default function BlogPost({ xs, sm, md, lg, nameOfProject, src, intro, slug }) {
 	return (
@@ -14,7 +13,7 @@ export default function BlogPost({ xs, sm, md, lg, nameOfProject, src, intro, sl
 				<h3 className={globalstyles.h3}> {nameOfProject}</h3>
 				<p className={globalstyles.p2}>{intro}</p>
 				<Link to={`/blog/${slug}`} className={styles.readMore}>
-					Read post <IoIosArrowForward />
+					Read post
 				</Link>
 			</div>
 		</Col>
