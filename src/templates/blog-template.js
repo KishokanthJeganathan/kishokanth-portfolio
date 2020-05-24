@@ -86,8 +86,8 @@ export default function BlogTemplate({ data }) {
 			<SEO
 				title={data.contentfulMyBlog.nameOfProject}
 				description={data.contentfulMyBlog.projectIntro.internal.content}
-				image="https://kapwi.ng/c/2vzMYSCO"
 				article="true"
+				image="https://kapwi.ng/c/2vzMYSCO"
 			/>
 			<Col>
 				<Row className={styles.row}>
