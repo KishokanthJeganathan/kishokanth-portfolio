@@ -28,7 +28,7 @@ export default function NavigationBar() {
 		<Navbar collapseOnSelect sticky="top" expand="md" className={styles.NavigationBar}>
 			<Navbar.Brand href="#home">
 				<div className={styles.authorDetails}>
-					<img src={picture.fluid.src} className={styles.img} />
+					<img src={picture.fluid.src} className={styles.img} alt={picture.title} />
 					<div>
 						<p className={styles.name}>{name}</p>
 						<p className={styles.title}>{tittle}</p>

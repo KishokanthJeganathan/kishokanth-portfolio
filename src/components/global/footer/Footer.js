@@ -3,7 +3,7 @@ import styles from '../footer/footer.module.css';
 import socialMedia from '../../../constants/Socialmedia';
 import { v4 as uuidv4 } from 'uuid';
 import { Row, Col } from 'react-bootstrap';
-import { Link, graphql, useStaticQuery } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 
 const query = graphql`
 	query {
@@ -30,7 +30,7 @@ export default function Footer() {
 				<Row className={styles.row}>
 					<Col xs={12} md={4} className={styles.profile}>
 						<div className={styles.authorDetails}>
-							<img src={picture.fluid.src} className={styles.img} />
+							<img src={picture.fluid.src} className={styles.img} alt={picture.tittle} />
 							<div>
 								<p className={styles.name}>{name}</p>
 								<p className={styles.title}>{tittle}</p>

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Col } from 'react-bootstrap';
 import globalstyles from '../../global/global.module.css';
-import styles from '../Tittle/tittle.module.css';
 
 export default function Tittle({ tittle, subtittle, padding }) {
 	return (

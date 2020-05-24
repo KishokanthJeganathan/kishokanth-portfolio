@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styles from '../newsletterForm/newsletterForm.module.css';
-import { Col, Row } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
 import Tittle from '../../global/Tittle/Tittle';
 import { graphql, useStaticQuery } from 'gatsby';
 import EmailSubscriberForm from '../../global/emailSubscriberForm/EmailSubscriberForm';

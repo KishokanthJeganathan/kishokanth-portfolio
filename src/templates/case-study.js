@@ -1,13 +1,11 @@
 import React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql } from 'gatsby';
 import { Col, Row } from 'react-bootstrap';
 import TextHolder from '../components/casestudy/TextHolder/TextHolder';
 import ImageHolder from '../components/casestudy/imageHolder/ImageHolder';
-import BackgroundImage from 'gatsby-background-image';
 import styles from '../templates/caseStudy.module.css';
 import Img from 'gatsby-image';
 import globalstyles from '../components/global/global.module.css';
-
 import Layout from '../components/global/layout/Layout';
 import BackgroundCta from '../components/casestudy/backgroundCta/BackgroundCta';
 
