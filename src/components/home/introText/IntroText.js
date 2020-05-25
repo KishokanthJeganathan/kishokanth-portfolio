@@ -18,7 +18,7 @@ export default function IntroText() {
 					website a web-app and every web-app a website.
 				</p>
 				<p className={globalstyles.p1}>
-					Got an idea in mind?
+					<span className={styles.intro}>Got an idea in mind?</span>
 					<a href="mailto:hello@kishokanth.com" className={styles.introTextCTA}>
 						Let's talk!
 					</a>

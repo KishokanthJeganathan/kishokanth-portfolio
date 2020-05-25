@@ -11,7 +11,9 @@ export default function ContentHolder({ xs, sm, md, lg, nameOfProject, src, intr
 			<Img fluid={src} />
 			<div className={styles.content}>
 				<h3 className={globalstyles.h3}> {nameOfProject}</h3>
-				<p className={globalstyles.p2}>{intro}</p>
+				<p className={globalstyles.p2}>
+					<span className={styles.intro}>{intro}</span>
+				</p>
 				<Link to={`/portfolio/${slug}`} className={styles.readMore}>
 					Read casestudy
 				</Link>

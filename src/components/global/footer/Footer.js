@@ -39,7 +39,13 @@ export default function Footer() {
 					</Col>
 					<Col xs={12} md={4} className={styles.footerSocialMedia}>
 						{socialMedia.map((platform) => (
-							<a className={styles.socialMedia} href={platform.url} key={uuidv4()}>
+							<a
+								className={styles.socialMedia}
+								href={platform.url}
+								key={uuidv4()}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								{platform.icon}
 							</a>
 						))}
@@ -47,12 +53,7 @@ export default function Footer() {
 					<Col xs={12} md={4} className={styles.footerCTA}>
 						<p className={styles.p}>
 							Enthusiastic about building something great? Let's get talking at
-							<a
-								href="mailto:hello@kishokanth.com"
-								className={styles.emailAddress}
-								target="_blank"
-								rel="noopener noreferrer"
-							>
+							<a href="mailto:hello@kishokanth.com" className={styles.emailAddress}>
 								hello@kishokanth.com
 							</a>
 						</p>

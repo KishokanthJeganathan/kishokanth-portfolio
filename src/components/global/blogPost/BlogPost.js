@@ -11,7 +11,9 @@ export default function BlogPost({ xs, sm, md, lg, nameOfProject, src, intro, sl
 			<Img fluid={src} />
 			<div className={styles.content}>
 				<h3 className={globalstyles.h3}> {nameOfProject}</h3>
-				<p className={globalstyles.p2}>{intro}</p>
+				<p className={globalstyles.p2}>
+					<span className={styles.intro}>{intro}</span>
+				</p>
 				<Link to={`/blog/${slug}`} className={styles.readMore}>
 					Read post
 				</Link>
