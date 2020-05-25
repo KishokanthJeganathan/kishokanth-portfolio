@@ -37,6 +37,7 @@
     "react-scrolling-progress": "^1.0.3",
     "react-share": "^4.1.0",
     "react-syntax-highlighter": "^12.2.1",
+    "react-typeform-embed": "^0.2.1",
     "uuid": "^8.0.0"
   },
   "devDependencies": {
