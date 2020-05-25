@@ -133,6 +133,13 @@
 	.content-holder-md {
 		display: none;
 	}
+
+	.cta-question {
+		color: white;
+		font-size: 1.3rem;
+		width: 80vw;
+		font-weight: 900;
+	}
 }
 @media only screen and (min-device-width: 577px) and (max-device-width: 768px) {
 	.cta-question {
