@@ -93,7 +93,7 @@ export default function BlogTemplate({ data }) {
 				title={data.contentfulMyBlog.nameOfProject}
 				description={data.contentfulMyBlog.metaDescription}
 				article="true"
-				image={data.contentfulMyBlog.metaImage.fluid.src}
+				image="https://i.ibb.co/3CZJcMM/Studio-Project-1.jpg"
 			/>
 			<Col>
 				<Row className={styles.row}>
