@@ -57,6 +57,13 @@ module.exports = {
 				sv: '6'
 			}
 		},
+		{
+			resolve: `gatsby-plugin-canonical-urls`,
+			options: {
+				siteUrl: `https://kishokanth.com`
+			}
+		},
+
 		`gatsby-transformer-sharp`,
 		`gatsby-plugin-sharp`,
 		`gatsby-plugin-react-helmet`,
