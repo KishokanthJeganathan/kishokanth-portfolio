@@ -3,6 +3,5 @@
 export default [
 	{ path: '/', text: 'HOME' },
 	{ path: '/portfolio', text: 'PORTFOLIO' },
-	{ path: '/blog', text: 'BLOG' },
-	{ path: '/videos', text: 'VIDEOS' }
+	{ path: '/blog', text: 'BLOG' }
 ];
