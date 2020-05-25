@@ -116,7 +116,6 @@ export default function caseStudy({ data }) {
 		ctaText
 	} = data.contentfulMyPortfolio;
 
-	console.log(data);
 	return (
 		<Layout>
 			<SEO
@@ -187,7 +186,7 @@ export default function caseStudy({ data }) {
 						<p className={globalstyles.p3}>{quote.quote}</p>
 
 						<div className={styles.quoteProviderDetails}>
-							<img src={quoteImage.fluid.src} alt={quoteImage.portfolioCoverImage.tittle} />
+							<img src={quoteImage.fluid.src} alt={data.contentfulMyPortfolio.quoteName} />
 							<div>
 								<p className={styles.contentPSm}>{quoteName}</p>
 								<p className={styles.contentPSm}>{quoteGiverTittle}</p>
