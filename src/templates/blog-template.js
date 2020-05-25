@@ -85,7 +85,7 @@ export default function BlogTemplate({ data }) {
 	};
 
 	const { json } = data.contentfulMyBlog.richdata;
-	console.log(data);
+	console.log(data.contentfulMyBlog.metaImageLink.internal.content);
 
 	return (
 		<Layout>
@@ -93,7 +93,7 @@ export default function BlogTemplate({ data }) {
 				title={data.contentfulMyBlog.nameOfProject}
 				description={data.contentfulMyBlog.metaDescription}
 				article
-				image={data.contentfulMyBlog.metaImageLink.internal.content}
+				image={`${data.contentfulMyBlog.metaImageLink.internal.content}`}
 			/>
 			<Col>
 				<Row className={styles.row}>
