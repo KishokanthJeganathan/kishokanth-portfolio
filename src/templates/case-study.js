@@ -8,6 +8,7 @@ import Img from 'gatsby-image';
 import globalstyles from '../components/global/global.module.css';
 import Layout from '../components/global/layout/Layout';
 import BackgroundCta from '../components/casestudy/backgroundCta/BackgroundCta';
+import SEO from '../components/global/seo';
 
 export const query = graphql`
 	query($slug: String) {
@@ -84,6 +85,8 @@ export const query = graphql`
 				}
 				title
 			}
+			metaDescription
+			metaImageLink
 		}
 	}
 `;
@@ -116,6 +119,11 @@ export default function caseStudy({ data }) {
 	console.log(data);
 	return (
 		<Layout>
+			<SEO
+				title={data.contentfulMyPortfolio.nameOfProject}
+				description={data.contentfulMyPortfolio.metaDescription}
+				image={data.contentfulMyPortfolio.metaImageLink}
+			/>
 			<Row>
 				<Col xs={12} md={9} lg={6} className={styles.intro}>
 					<h1 className={styles.h1}>{nameOfProject}</h1>
