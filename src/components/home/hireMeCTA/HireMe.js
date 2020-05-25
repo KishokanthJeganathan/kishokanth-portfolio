@@ -49,7 +49,10 @@ export default function HireMe() {
 							</p>
 							<p>
 								PS- I have a
-								<a href="blogpost.com" className={styles.hireMeBlogPost}>
+								<a
+									href="https://www.kishokanth.com/blog/what-makes-a-great-web-development-partnership"
+									className={styles.hireMeBlogPost}
+								>
 									blog post
 								</a>
 								on building great partnerships
