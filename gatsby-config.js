@@ -18,6 +18,14 @@ module.exports = {
 	},
 	plugins: [
 		{
+			resolve: 'gatsby-plugin-robots-txt',
+			options: {
+				host: 'https://relaxed-lalande-6a9cb4.netlify.app',
+				sitemap: 'https://relaxed-lalande-6a9cb4.netlify.app/sitemap.xml',
+				policy: [ { userAgent: '*', allow: '/' } ]
+			}
+		},
+		{
 			resolve: 'gatsby-plugin-mailchimp',
 			options: {
 				endpoint:
@@ -34,6 +42,7 @@ module.exports = {
 		},
 		`gatsby-transformer-sharp`,
 		`gatsby-plugin-sharp`,
-		`gatsby-plugin-react-helmet`
+		`gatsby-plugin-react-helmet`,
+		`gatsby-plugin-sitemap`
 	]
 };
