@@ -75,7 +75,7 @@ const query = graphql`
 				defaultTitle: title
 				titleTemplate
 				defaultDescription: description
-				DefaultUrl: url
+				DefaultUrl: siteUrl
 				defaultImage: image
 				twitterUsername
 			}

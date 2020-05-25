@@ -11,7 +11,7 @@ module.exports = {
 		titleTemplate: '%s | Kishokanth.com',
 		description:
 			'Welcome to my portfolio where I showcase my web development work and write article with tips on front-end development',
-		url: 'http://kishokanth.com', // No trailing slash allowed!
+		siteUrl: 'http://kishokanth.com', // No trailing slash allowed!
 		image: 'https://i.ibb.co/T4nfB1c/Landing-page-image.jpg',
 		twitterUsername: '@kishojegan',
 		author: 'Kishokanth Jeganathan'
