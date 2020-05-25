@@ -87,7 +87,7 @@ export default function BlogTemplate({ data }) {
 				title={data.contentfulMyBlog.nameOfProject}
 				description={data.contentfulMyBlog.projectIntro.internal.content}
 				article="true"
-				image="https://kapwi.ng/c/2vzMYSCO"
+				image="https://image.freepik.com/free-photo/food-concept-homemade-tandoori-chicken-masala-curry-with-naan-bread-yogurt-dipping-sauce_42124-1313.jpg"
 			/>
 			<Col>
 				<Row className={styles.row}>
