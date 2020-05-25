@@ -12,7 +12,7 @@ module.exports = {
 		description:
 			'Welcome to my portfolio where I showcase my web development work and write article with tips on front-end development',
 		url: 'https://relaxed-lalande-6a9cb4.netlify.app', // No trailing slash allowed!
-		image: '/Image.jpg', // Path to your image you placed in the 'static' folder
+		image: 'https://i.ibb.co/T4nfB1c/Landing-page-image.jpg',
 		twitterUsername: '@kishojegan',
 		author: 'Kishokanth Jeganathan'
 	},

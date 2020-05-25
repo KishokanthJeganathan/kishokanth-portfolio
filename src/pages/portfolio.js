@@ -6,6 +6,7 @@ import { Row } from 'react-bootstrap';
 import { v4 as uuidv4 } from 'uuid';
 import HireMe from '../components/home/hireMeCTA/HireMe';
 import ContentHolder from '../components/global/contentHolder/ContentHolder';
+import SEO from '../components/global/seo';
 
 const query = graphql`
 	query {
@@ -29,6 +30,10 @@ const query = graphql`
 			subtittle
 			tittle
 		}
+		contentfulMetas(tittle: { eq: "Portfolio" }) {
+			metaImageLink
+			description
+		}
 	}
 `;
 
@@ -39,6 +44,11 @@ export default function Portfolio() {
 	const projects = data.allContentfulMyPortfolio.nodes;
 	return (
 		<Layout>
+			<SEO
+				title="Portfolio"
+				description={data.contentfulMetas.description}
+				image={data.contentfulMetas.metaImageLink}
+			/>
 			<PageTittle tittle={`${tittle} 🙌`} subtittle={`${subtittle}`} />
 			<Row>
 				{projects.map((project) => (

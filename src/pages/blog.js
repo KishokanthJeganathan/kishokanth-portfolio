@@ -31,12 +31,9 @@ const query = graphql`
 			tittle
 		}
 		contentfulMetas(tittle: { eq: "Blog" }) {
+			metaImageLink
+			tittle
 			description
-			image {
-				fixed {
-					src
-				}
-			}
 		}
 	}
 `;
@@ -51,7 +48,7 @@ export default function Blog() {
 			<SEO
 				title="Blog"
 				description={data.contentfulMetas.description}
-				image={data.contentfulMetas.image.fixed.src}
+				image={data.contentfulMetas.metaImageLink}
 			/>
 			<PageTittle tittle={`${tittle} ✍️`} subtittle={`${subtittle}`} />
 			<Row>
