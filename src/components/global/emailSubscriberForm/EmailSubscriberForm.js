@@ -26,13 +26,25 @@ export default function EmailSubscriberForm({ CTA, bordercolor, textAlign }) {
 				})
 				.catch((errors) => {
 					setSubmissionMessege(
-						<p>Uhoh, I cant register this email due to some reason. Maybe there is a typo? 🤔</p>
+						<p>
+							Uhoh, I cant register this email due to some reason. Maybe there is a typo
+							<span role="img" aria-label="thinking emoji">
+								🤔
+							</span>
+						</p>
 					);
 					setEmail('');
 					setCheckbox(!checkbox);
 				});
 		} else {
-			setSubmissionMessege(<p className={styles.checkboxReminder}>Please agree to share your data 😊</p>);
+			setSubmissionMessege(
+				<p className={styles.checkboxReminder}>
+					Please agree to share your data{' '}
+					<span role="img" aria-label="smiling emoji">
+						😊
+					</span>
+				</p>
+			);
 		}
 	};
 	return (

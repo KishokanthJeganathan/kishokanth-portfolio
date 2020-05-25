@@ -40,3 +40,10 @@
 		padding-right: 15%;
 	}
 }
+
+@media only screen and (min-device-width: 1600px) {
+	.hire-me {
+		min-height: 30vh;
+		padding-right: 15%;
+	}
+}

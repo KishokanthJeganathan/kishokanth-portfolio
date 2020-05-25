@@ -28,3 +28,9 @@
 		min-height: 50vh;
 	}
 }
+
+@media only screen and (min-device-width: 1600px) {
+	.newsletterForm {
+		min-height: 25vh;
+	}
+}
