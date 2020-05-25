@@ -85,7 +85,6 @@ export default function BlogTemplate({ data }) {
 	};
 
 	const { json } = data.contentfulMyBlog.richdata;
-	console.log(data.contentfulMyBlog.metaImageLink.internal.content);
 
 	return (
 		<Layout>
