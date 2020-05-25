@@ -29,6 +29,12 @@ export const query = graphql`
 			richdata {
 				json
 			}
+			metaDescription
+			metaImage {
+				fluid {
+					src
+				}
+			}
 		}
 	}
 `;
@@ -85,9 +91,9 @@ export default function BlogTemplate({ data }) {
 		<Layout>
 			<SEO
 				title={data.contentfulMyBlog.nameOfProject}
-				description={data.contentfulMyBlog.projectIntro.internal.content}
+				description={data.contentfulMyBlog.metaDescription}
 				article="true"
-				image="https://image.freepik.com/free-photo/food-concept-homemade-tandoori-chicken-masala-curry-with-naan-bread-yogurt-dipping-sauce_42124-1313.jpg"
+				image={data.contentfulMyBlog.metaImage.fluid.src}
 			/>
 			<Col>
 				<Row className={styles.row}>
