@@ -34,7 +34,7 @@ export default function NavigationBar() {
 		>
 			<Navbar.Brand href="#home">
 				<div className={styles.authorDetails}>
-					<img src={picture.fluid.src} className={styles.img} alt={picture.title} />
+					<img src={picture.fluid.src} className={styles.img} alt="head shot of Kishokanth" />
 					<div>
 						<p className={styles.name}>{name}</p>
 						<p className={styles.title}>{tittle}</p>

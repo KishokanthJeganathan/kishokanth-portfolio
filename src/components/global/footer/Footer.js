@@ -30,7 +30,7 @@ export default function Footer() {
 				<Row className={styles.row}>
 					<Col xs={12} md={4} className={styles.profile}>
 						<div className={styles.authorDetails}>
-							<img src={picture.fluid.src} className={styles.img} alt={picture.tittle} />
+							<img src={picture.fluid.src} className={styles.img} alt="head shot of Kishokanth" />
 							<div>
 								<p className={styles.name}>{name}</p>
 								<p className={styles.title}>{tittle}</p>
@@ -47,7 +47,12 @@ export default function Footer() {
 					<Col xs={12} md={4} className={styles.footerCTA}>
 						<p className={styles.p}>
 							Enthusiastic about building something great? Let's get talking at
-							<a href="mailto:hello@kishokanth.com" className={styles.emailAddress}>
+							<a
+								href="mailto:hello@kishokanth.com"
+								className={styles.emailAddress}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								hello@kishokanth.com
 							</a>
 						</p>
