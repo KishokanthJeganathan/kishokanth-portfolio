@@ -30,9 +30,9 @@ export const query = graphql`
 				json
 			}
 			metaDescription
-			metaImage {
-				fluid {
-					src
+			metaImageLink {
+				internal {
+					content
 				}
 			}
 		}
@@ -92,8 +92,8 @@ export default function BlogTemplate({ data }) {
 			<SEO
 				title={data.contentfulMyBlog.nameOfProject}
 				description={data.contentfulMyBlog.metaDescription}
-				article="true"
-				image="https://i.ibb.co/3CZJcMM/Studio-Project-1.jpg"
+				article
+				image={data.contentfulMyBlog.metaImageLink.internal.content}
 			/>
 			<Col>
 				<Row className={styles.row}>
