@@ -30,11 +30,7 @@ export const query = graphql`
 				json
 			}
 			metaDescription
-			metaImageLink {
-				internal {
-					content
-				}
-			}
+			metaImageLink
 		}
 	}
 `;
@@ -92,7 +88,7 @@ export default function BlogTemplate({ data }) {
 				title={data.contentfulMyBlog.nameOfProject}
 				description={data.contentfulMyBlog.metaDescription}
 				article
-				image={data.contentfulMyBlog.metaDescription}
+				image={data.contentfulMyBlog.metaImageLink}
 			/>
 			<Col>
 				<Row className={styles.row}>
