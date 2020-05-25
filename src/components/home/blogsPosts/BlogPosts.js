@@ -58,8 +58,8 @@ export default function BlogPosts() {
 						/>
 					))}
 					<Col>
-						<Link className={styles.link}>
-							<span className={globalstyles.p1}>See More Projects</span>
+						<Link className={styles.link} to="/blog">
+							<span className={globalstyles.p1}>See More Posts</span>
 						</Link>
 					</Col>
 				</Row>
