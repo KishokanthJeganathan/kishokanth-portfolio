@@ -50,6 +50,13 @@ module.exports = {
 				accessToken: `dhVJpVQBppuvMv-Mjw_E_44PenQra3jVn-s8nvKMDFc`
 			}
 		},
+		{
+			resolve: `gatsby-plugin-hotjar`,
+			options: {
+				id: '1827115',
+				sv: '6'
+			}
+		},
 		`gatsby-transformer-sharp`,
 		`gatsby-plugin-sharp`,
 		`gatsby-plugin-react-helmet`,
