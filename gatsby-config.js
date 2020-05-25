@@ -11,17 +11,27 @@ module.exports = {
 		titleTemplate: '%s | Kishokanth.com',
 		description:
 			'Welcome to my portfolio where I showcase my web development work and write article with tips on front-end development',
-		siteUrl: 'http://kishokanth.com', // No trailing slash allowed!
+		siteUrl: 'https://kishokanth.com', // No trailing slash allowed!
 		image: 'https://i.ibb.co/T4nfB1c/Landing-page-image.jpg',
 		twitterUsername: '@kishojegan',
 		author: 'Kishokanth Jeganathan'
 	},
 	plugins: [
 		{
+			resolve: `gatsby-plugin-google-analytics`,
+			options: {
+				trackingId: 'UA-167579751-1',
+				head: true,
+				anonymize: true,
+				respectDNT: true,
+				pageTransitionDelay: 0
+			}
+		},
+		{
 			resolve: 'gatsby-plugin-robots-txt',
 			options: {
-				host: 'http://kishokanth.com',
-				sitemap: 'http://kishokanth.com/sitemap.xml',
+				host: 'https://kishokanth.com',
+				sitemap: 'https://kishokanth.com/sitemap.xml',
 				policy: [ { userAgent: '*', allow: '/' } ]
 			}
 		},
