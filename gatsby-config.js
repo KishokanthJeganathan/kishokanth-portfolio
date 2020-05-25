@@ -11,7 +11,7 @@ module.exports = {
 		titleTemplate: '%s | Kishokanth.com',
 		description:
 			'Welcome to my portfolio where I showcase my web development work and write article with tips on front-end development',
-		url: 'https://relaxed-lalande-6a9cb4.netlify.app', // No trailing slash allowed!
+		url: 'http://kishokanth.com', // No trailing slash allowed!
 		image: 'https://i.ibb.co/T4nfB1c/Landing-page-image.jpg',
 		twitterUsername: '@kishojegan',
 		author: 'Kishokanth Jeganathan'
@@ -20,8 +20,8 @@ module.exports = {
 		{
 			resolve: 'gatsby-plugin-robots-txt',
 			options: {
-				host: 'https://relaxed-lalande-6a9cb4.netlify.app',
-				sitemap: 'https://relaxed-lalande-6a9cb4.netlify.app/sitemap.xml',
+				host: 'http://kishokanth.com',
+				sitemap: 'http://kishokanth.com/sitemap.xml',
 				policy: [ { userAgent: '*', allow: '/' } ]
 			}
 		},

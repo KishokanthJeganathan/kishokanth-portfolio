@@ -35,7 +35,7 @@ export const query = graphql`
 	}
 `;
 
-const website_url = 'http://localhost:8000/';
+const website_url = 'http://kishokanth.com/';
 
 const Bold = ({ children }) => <p className={styles.bold}>{children}</p>;
 const Text = ({ children }) => <p className={styles.p}>{children}</p>;
