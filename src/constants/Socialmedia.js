@@ -5,7 +5,7 @@ import { AiOutlineMedium, AiOutlineYoutube, AiOutlineLinkedin, AiOutlineGithub }
 
 export default [
 	{ icon: <AiOutlineMedium />, url: 'https://www.instagram.com/tandoori_resturantt/' },
-	{ icon: <AiOutlineYoutube />, url: 'https://www.instagram.com/tandoori_resturantt/' },
+	{ icon: <AiOutlineYoutube />, url: 'https://www.instagram.com/tandoori_resturant/' },
 	{ icon: <AiOutlineLinkedin />, url: 'https://www.instagram.com/tandoori_resturantt/' },
 	{ icon: <AiOutlineGithub />, url: 'https://www.instagram.com/tandoori_resturantt/' }
 ];
