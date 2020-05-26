@@ -18,13 +18,28 @@ module.exports = {
 	},
 	plugins: [
 		{
-			resolve: `gatsby-plugin-google-analytics`,
+			resolve: `gatsby-plugin-gdpr-cookies`,
 			options: {
-				trackingId: 'UA-167579751-1',
-				head: true,
-				anonymize: true,
-				respectDNT: true,
-				pageTransitionDelay: 0
+				googleAnalytics: {
+					trackingId: 'UA-167579751-1', // leave empty if you want to disable the tracker
+					cookieName: 'gatsby-gdpr-google-analytics', // default
+					anonymize: true, // default
+					head: true,
+
+					respectDNT: true,
+					pageTransitionDelay: 0
+				},
+				googleTagManager: {
+					trackingId: '', // leave empty if you want to disable the tracker
+					cookieName: 'gatsby-gdpr-google-tagmanager', // default
+					dataLayerName: 'dataLayer' // default
+				},
+				facebookPixel: {
+					pixelId: '', // leave empty if you want to disable the tracker
+					cookieName: 'gatsby-gdpr-facebook-pixel' // default
+				},
+				// defines the environments where the tracking should be available  - default is ["production"]
+				environments: [ 'production', 'development' ]
 			}
 		},
 		{

@@ -9,6 +9,7 @@ export default function Layout({ children }) {
 		<Container className={styles.layout}>
 			<NavigationBar />
 			{children}
+
 			<Footer />
 		</Container>
 	);

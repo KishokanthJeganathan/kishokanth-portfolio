@@ -5,6 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { Row, Col } from 'react-bootstrap';
 import { graphql, useStaticQuery } from 'gatsby';
 import { Link } from 'gatsby';
+import CookieConsent, { Cookies } from 'react-cookie-consent';
 
 const query = graphql`
 	query {
@@ -69,6 +70,26 @@ export default function Footer() {
 					</Col>
 				</Row>
 			</Col>
+			<CookieConsent
+				location="bottom"
+				style={{ background: 'white', color: 'grey' }}
+				buttonClasses="d-none"
+				containerClasses=" text-center"
+				expires={150}
+				acceptOnScroll={true}
+				acceptOnScrollPercentage={30}
+				cookieName="gatsby-gdpr-google-analytics"
+			>
+				By browsing this website, you agree to our use of 🍪. Read more on this
+				<a
+					href="https://www.kishokanth.com/privacypolicy"
+					target="_blank"
+					rel="noopener noreferrer"
+					className={styles.privacyPolicyDisclaimer}
+				>
+					here
+				</a>
+			</CookieConsent>
 		</footer>
 	);
 }
