@@ -4,6 +4,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 import { Col, Row } from 'react-bootstrap';
 import styles from '../hireMeCTA/hireMe.module.css';
 import globalstyles from '../../global/global.module.css';
+import { Link } from 'gatsby';
 
 const query = graphql`
 	{
@@ -43,9 +44,9 @@ export default function HireMe() {
 							<p className={globalstyles.p}>{CTA}</p>
 							<p className={globalstyles.p1}>
 								Let's get talking. Drop me a line
-								<a href="mailto:hello@kishokanth.com" className={styles.hireCTA}>
+								<Link to="/contact" className={styles.hireCTA}>
 									here
-								</a>
+								</Link>
 							</p>
 							<p>
 								PS- I have a

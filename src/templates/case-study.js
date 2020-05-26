@@ -9,6 +9,7 @@ import globalstyles from '../components/global/global.module.css';
 import Layout from '../components/global/layout/Layout';
 import BackgroundCta from '../components/casestudy/backgroundCta/BackgroundCta';
 import SEO from '../components/global/seo';
+import { Link } from 'gatsby';
 
 export const query = graphql`
 	query($slug: String) {
@@ -202,9 +203,9 @@ export default function caseStudy({ data }) {
 				<BackgroundCta fluid={portfolioCoverImage.fluid} height="25vh">
 					<div className={styles.ctaContent}>
 						<p className={styles.ctaQuestion}>{ctaText.internal.content}</p>
-						<a href="mailto:hello@kishokanth.com" className={styles.button}>
+						<Link to="/contact" className={styles.button}>
 							Let's talk!
-						</a>
+						</Link>
 					</div>
 				</BackgroundCta>
 			</Col>

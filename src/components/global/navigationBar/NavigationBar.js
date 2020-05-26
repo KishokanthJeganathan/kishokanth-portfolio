@@ -32,15 +32,17 @@ export default function NavigationBar() {
 			className={styles.NavigationBar}
 			style={{ backgroundColor: 'white' }}
 		>
-			<Navbar.Brand href="#home">
-				<div className={styles.authorDetails}>
-					<img src={picture.fluid.src} className={styles.img} alt="head shot of Kishokanth" />
-					<div>
-						<p className={styles.name}>{name}</p>
-						<p className={styles.title}>{tittle}</p>
+			<Link to="/">
+				<Navbar.Brand>
+					<div className={styles.authorDetails}>
+						<img src={picture.fluid.src} className={styles.img} alt="head shot of Kishokanth" />
+						<div>
+							<p className={styles.name}>{name}</p>
+							<p className={styles.title}>{tittle}</p>
+						</div>
 					</div>
-				</div>
-			</Navbar.Brand>
+				</Navbar.Brand>
+			</Link>
 			<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 			<Navbar.Collapse id="responsive-navbar-nav">
 				<Nav className="ml-auto">

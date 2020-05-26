@@ -4,6 +4,7 @@ import socialMedia from '../../../constants/Socialmedia';
 import { v4 as uuidv4 } from 'uuid';
 import { Row, Col } from 'react-bootstrap';
 import { graphql, useStaticQuery } from 'gatsby';
+import { Link } from 'gatsby';
 
 const query = graphql`
 	query {
@@ -52,14 +53,19 @@ export default function Footer() {
 					</Col>
 					<Col xs={12} md={4} className={styles.footerCTA}>
 						<p className={styles.p}>
-							Enthusiastic about building something great? Let's get talking at
-							<a href="mailto:hello@kishokanth.com" className={styles.emailAddress}>
-								hello@kishokanth.com
-							</a>
+							Enthusiastic about building something great? Let's get talking
+							<Link to="/contact" className={styles.contactForm}>
+								here
+							</Link>
 						</p>
 					</Col>
 					<Col xs={12} className={styles.copyright}>
 						{`©Kishokanth - ${new Date().getFullYear()}`}
+					</Col>
+					<Col xs={12}>
+						<Link to="/privacypolicy" className={styles.privacyPolicy}>
+							Privacy Policy
+						</Link>
 					</Col>
 				</Row>
 			</Col>

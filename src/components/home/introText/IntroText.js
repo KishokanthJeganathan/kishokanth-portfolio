@@ -2,6 +2,7 @@ import React from 'react';
 import { Col } from 'react-bootstrap';
 import styles from '../introText/introText.module.css';
 import globalstyles from '../../global/global.module.css';
+import { Link } from 'gatsby';
 
 export default function IntroText() {
 	return (
@@ -19,9 +20,9 @@ export default function IntroText() {
 				</p>
 				<p className={globalstyles.p1}>
 					<span className={styles.intro}>Got an idea in mind?</span>
-					<a href="mailto:hello@kishokanth.com" className={styles.introTextCTA}>
+					<Link to="/contact" className={styles.introTextCTA}>
 						Let's talk!
-					</a>
+					</Link>
 				</p>
 			</Col>
 		</section>
