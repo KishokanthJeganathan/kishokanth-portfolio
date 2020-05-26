@@ -10,16 +10,22 @@ export default function EmailSubscriberForm({ CTA, bordercolor, textAlign }) {
 	const [ submissionMessege, setSubmissionMessege ] = useState('');
 	const [ submissionSuccesful, setSubmissionSuccesful ] = useState(false);
 
+	const displaySubmissionMessege = () => {
+		if (submissionMessege === 'Thank you for subscribing!') {
+			return 'Thank you for subscribing! 🎉';
+		} else if (submissionMessege.includes('already')) {
+			return 'You have subscribed to this newsletter already. Thank you once again 😊';
+		} else {
+			return submissionMessege;
+		}
+	};
+
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		if (checkbox === true) {
 			addToMailchimp(email)
 				.then((data) => {
-					setSubmissionMessege(
-						<p>{`${data.msg === 'Thank you for subscribing!'
-							? 'Thank you for subscribing! 🎉'
-							: data.msg}`}</p>
-					);
+					setSubmissionMessege(data.msg);
 					setEmail('');
 					setCheckbox(!checkbox);
 					setSubmissionSuccesful(data.msg === 'Thank you for subscribing!' ? true : false);
@@ -49,7 +55,7 @@ export default function EmailSubscriberForm({ CTA, bordercolor, textAlign }) {
 	};
 	return (
 		<Col xs={12} style={{ textAlign: `${textAlign}` }}>
-			{submissionMessege}
+			<p>{displaySubmissionMessege()}</p>
 			{!submissionSuccesful && (
 				<span>
 					<form onSubmit={handleSubmit}>
