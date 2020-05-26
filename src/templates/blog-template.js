@@ -95,6 +95,7 @@ export default function BlogTemplate({ data }) {
 					<Col xs={12} md={10} className={styles.image}>
 						<Img fluid={data.contentfulMyBlog.headerimage.fluid} />
 						<h1 className={styles.h1}>{data.contentfulMyBlog.nameOfProject}</h1>
+						<p className={styles.readingTime}>Written by Kishokanth Jeganathan</p>
 						<p className={styles.publishedDate}>{`Published on ${data.contentfulMyBlog.published}`}</p>
 						<p className={styles.readingTime}>{`${data.contentfulMyBlog.readingTime} min read`}</p>
 					</Col>
