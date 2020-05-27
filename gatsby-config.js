@@ -4,6 +4,10 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
+require('dotenv').config({
+	path: `.env.${process.env.NODE_ENV}`
+});
+
 module.exports = {
 	/* Your site config here */
 	siteMetadata: {
@@ -21,7 +25,7 @@ module.exports = {
 			resolve: `gatsby-plugin-gdpr-cookies`,
 			options: {
 				googleAnalytics: {
-					trackingId: 'UA-167579751-1', // leave empty if you want to disable the tracker
+					trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID, // leave empty if you want to disable the tracker
 					cookieName: 'gatsby-gdpr-google-analytics', // default
 					anonymize: true, // default
 					head: true,
@@ -53,23 +57,22 @@ module.exports = {
 		{
 			resolve: 'gatsby-plugin-mailchimp',
 			options: {
-				endpoint:
-					'https://gmail.us18.list-manage.com/subscribe/post?u=ba989a9bece1d2c3783cc995b&amp;id=a9fc174077' // add your MC list endpoint here; see instructions below
+				endpoint: process.env.MAILCHIMP_ENDPOINT // add your MC list endpoint here; see instructions below
 			}
 		},
 		{
 			resolve: `gatsby-source-contentful`,
 			options: {
-				spaceId: `x7h3t1vvhyg3`,
+				spaceId: process.env.CONTENTFUL_SOURCE_ID,
 				// Learn about environment variables: https://gatsby.dev/env-vars
-				accessToken: `dhVJpVQBppuvMv-Mjw_E_44PenQra3jVn-s8nvKMDFc`
+				accessToken: process.env.CONTENTFUL_ACESS_TOKEN
 			}
 		},
 		{
 			resolve: `gatsby-plugin-hotjar`,
 			options: {
-				id: '1827115',
-				sv: '6'
+				id: process.env.HOTJAR_ID,
+				sv: process.env.HOTJAR_SV
 			}
 		},
 		{
