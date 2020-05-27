@@ -141,9 +141,9 @@ export default function caseStudy({ data }) {
 						</Col>
 						<Col xs={12} md={3}>
 							<p className={styles.contentPLg}>Interested?</p>
-							<a href="mailto:hello@kishokanth.com" className={styles.emailAddress}>
+							<Link className={styles.emailAddress} to="/contact">
 								Let's Talk!
-							</a>
+							</Link>
 						</Col>
 					</Row>
 				</Col>
