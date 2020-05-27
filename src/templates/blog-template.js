@@ -9,6 +9,7 @@ import { tomorrowNightEighties } from 'react-syntax-highlighter/dist/esm/styles/
 import Img from 'gatsby-image';
 import EmailSubscriberForm from '../components/global/emailSubscriberForm/EmailSubscriberForm';
 import SEO from '../components/global/seo';
+import SocialSharing from '../components/global/socialSharing/SocialSharing';
 
 export const query = graphql`
 	query($slug: String) {
@@ -102,7 +103,9 @@ export default function BlogTemplate({ data }) {
 					<Col xs={12} md={10} className={styles.content}>
 						{documentToReactComponents(json, options)}
 					</Col>
-
+					<Col xs={12} md={10}>
+						<SocialSharing />
+					</Col>
 					<EmailSubscriberForm
 						CTA="Keen to read more? Subscribe to my future emails 😊"
 						bordercolor="2px solid black"
