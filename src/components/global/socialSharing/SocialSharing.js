@@ -4,13 +4,12 @@ import { FaFacebookSquare, FaTwitterSquare, FaLinkedin } from 'react-icons/fa';
 import styles from '../socialSharing/socialSharing.module.css';
 
 export default function SocialSharing() {
-	let url = window.location.href;
 	return (
 		<Col>
 			<Row className={styles.shareButtonHolder}>
 				<Col xs={3} sm={2}>
 					<a
-						href={`https://facebook.com/sharer/sharer.php?u=${url}`}
+						href={`https://facebook.com/sharer/sharer.php?u=${window.location.href}`}
 						target="_blank"
 						rel="noopener noreferrer"
 						aria-label="Share on Facebook"
@@ -21,7 +20,7 @@ export default function SocialSharing() {
 				<Col xs={3} sm={2}>
 					<a
 						class="resp-sharing-button__link"
-						href={`https://twitter.com/intent/tweet/?text=${url}`}
+						href={`https://twitter.com/intent/tweet/?text=${window.location.href}`}
 						target="_blank"
 						rel="noopener noreferrer"
 						aria-label="share on Twitter"
@@ -32,7 +31,7 @@ export default function SocialSharing() {
 				<Col xs={3} sm={2}>
 					<a
 						class="resp-sharing-button__link"
-						href={` https://www.linkedin.com/sharing/share-offsite/?url=${url}`}
+						href={` https://www.linkedin.com/sharing/share-offsite/?url=${window.location.href}`}
 						target="_blank"
 						rel="noopener noreferrer"
 						aria-label="share on LinkedIn"
