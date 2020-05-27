@@ -78,6 +78,7 @@ export default function EmailSubscriberForm({ CTA, bordercolor, textAlign }) {
 							name="checkbox"
 							value={checkbox}
 							checked={checkbox}
+							id="checkbox for GDPR compliance"
 						/>
 						<label htmlFor="checkbox for GDPR compliance" className={styles.label}>
 							<p className={styles.disclaimer}>
