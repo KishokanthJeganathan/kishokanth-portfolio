@@ -20,7 +20,7 @@ export default function SocialSharing() {
 				</Col>
 				<Col xs={3} sm={2}>
 					<a
-						class="resp-sharing-button__link"
+						className="resp-sharing-button__link"
 						href={`https://twitter.com/intent/tweet/?text=${url}`}
 						target="_blank"
 						rel="noopener noreferrer"
@@ -31,7 +31,7 @@ export default function SocialSharing() {
 				</Col>
 				<Col xs={3} sm={2}>
 					<a
-						class="resp-sharing-button__link"
+						className="resp-sharing-button__link"
 						href={` https://www.linkedin.com/sharing/share-offsite/?url=${url}`}
 						target="_blank"
 						rel="noopener noreferrer"

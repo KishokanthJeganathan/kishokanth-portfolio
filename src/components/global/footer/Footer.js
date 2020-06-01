@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { Row, Col } from 'react-bootstrap';
 import { graphql, useStaticQuery } from 'gatsby';
 import { Link } from 'gatsby';
-import CookieConsent, { Cookies } from 'react-cookie-consent';
+import CookieConsent from 'react-cookie-consent';
 
 const query = graphql`
 	query {

@@ -48,8 +48,6 @@ const Code = ({ children }) => (
 );
 
 export default function BlogTemplate({ data }) {
-	console.log(data);
-
 	const options = {
 		renderMark: {
 			[MARKS.BOLD]: (text) => <Bold>{text}</Bold>,
@@ -68,15 +66,30 @@ export default function BlogTemplate({ data }) {
 				);
 			},
 			[INLINES.HYPERLINK]: (node) => {
-				return (
-					<a
-						href={node.data.uri}
-						target={`${node.data.uri.startsWith(website_url) ? '_self' : '_blank'}`}
-						rel={`${node.data.uri.startsWith(website_url) ? '' : 'noopener noreferrer'}`}
-					>
-						{node.content[0].value}
-					</a>
-				);
+				if (node.data.uri.indexOf('youtube.com') !== -1) {
+					return (
+						<div className={styles.videoHolder}>
+							<iframe
+								id="ytplayer"
+								src={node.data.uri}
+								type="text/html"
+								width="640"
+								height="360"
+								frameBorder="0"
+								allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture ; fullscreen"
+							/>
+						</div>
+					);
+				} else
+					return (
+						<a
+							href={node.data.uri}
+							target={`${node.data.uri.startsWith(website_url) ? '_self' : '_blank'}`}
+							rel={`${node.data.uri.startsWith(website_url) ? '' : 'noopener noreferrer'}`}
+						>
+							{node.content[0].value}
+						</a>
+					);
 			}
 		}
 	};

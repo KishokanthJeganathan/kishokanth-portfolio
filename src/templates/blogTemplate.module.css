@@ -1,3 +1,8 @@
+.video-holder {
+	display: flex;
+	justify-content: center;
+}
+
 .row {
 	display: flex;
 	justify-content: space-around;
@@ -48,6 +53,10 @@ blockquote {
 
 @media only screen and (max-device-width: 576px) {
 	.reading-time {
+		text-align: left;
+	}
+
+	.h1 {
 		text-align: left;
 	}
 }
