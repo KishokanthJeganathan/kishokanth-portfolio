@@ -15,6 +15,7 @@ export const query = graphql`
 	query($slug: String) {
 		contentfulMyBlog(slug: { eq: $slug }) {
 			nameOfProject
+			slug
 			published(formatString: "MMMM Do, YYYY")
 			readingTime
 			projectIntro {
@@ -94,6 +95,7 @@ export default function BlogTemplate({ data }) {
 	};
 
 	const { json } = data.contentfulMyBlog.richdata;
+	console.log(data);
 
 	return (
 		<Layout>
@@ -116,7 +118,7 @@ export default function BlogTemplate({ data }) {
 						{documentToReactComponents(json, options)}
 					</Col>
 					<Col xs={12} md={10}>
-						<SocialSharing />
+						<SocialSharing slug={data.contentfulMyBlog.slug} />
 					</Col>
 					<EmailSubscriberForm
 						CTA="Keen to read more? Subscribe to my future emails 😊"
