@@ -9,7 +9,7 @@ import globalstyles from '../../global/global.module.css';
 
 const query = graphql`
 	{
-		allContentfulMyBlog(filter: { featureOnHomepage: { eq: true } }, sort: { fields: order, order: ASC }) {
+		allContentfulMyBlog(filter: { featureOnHomepage: { eq: true } }, sort: { order: DESC, fields: published }) {
 			nodes {
 				featureOnHomepage
 				order
