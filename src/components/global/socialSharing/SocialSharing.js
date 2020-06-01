@@ -4,7 +4,8 @@ import { FaFacebookSquare, FaTwitterSquare, FaLinkedin } from 'react-icons/fa';
 import styles from '../socialSharing/socialSharing.module.css';
 
 export default function SocialSharing() {
-	let url = window.location.pathname;
+	let url = typeof window !== 'undefined' && window.location.pathname;
+
 	return (
 		<Col>
 			<Row className={styles.shareButtonHolder}>
