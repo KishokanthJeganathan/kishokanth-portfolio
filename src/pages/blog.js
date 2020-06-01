@@ -10,7 +10,7 @@ import SEO from '../components/global/seo';
 
 const query = graphql`
 	{
-		allContentfulMyBlog {
+		allContentfulMyBlog(sort: { order: DESC, fields: published }) {
 			nodes {
 				slug
 				nameOfProject
