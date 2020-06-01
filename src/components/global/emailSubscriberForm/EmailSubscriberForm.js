@@ -82,8 +82,16 @@ export default function EmailSubscriberForm({ CTA, bordercolor, textAlign }) {
 						/>
 						<label htmlFor="checkbox for GDPR compliance" className={styles.label}>
 							<p className={styles.disclaimer}>
-								By subscribing to our newsletter, you grant us permission to send you further
-								correspondence. For more information, please visit our privacy policy.
+								By subscribing to my newsletter, you grant me permission to send you further
+								correspondence. For more information, please visit my
+								<a
+									href="https://www.kishokanth.com/privacypolicy"
+									target="_blank"
+									rel="noopener noreferrer"
+									className={styles.privacyPolicy}
+								>
+									privacy policy
+								</a>.
 							</p>
 						</label>
 					</span>

@@ -53,6 +53,10 @@
 	padding-bottom: 0.3rem;
 }
 
+.privacy-policy {
+	padding-left: 0.3rem;
+}
+
 @media only screen and (max-device-width: 576px) {
 	.newsletterForm {
 		min-height: 90vh;
