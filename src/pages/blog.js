@@ -42,7 +42,7 @@ export default function Blog() {
 	const tittleData = data.contentfulSectionTittles;
 	const { tittle, subtittle } = tittleData;
 	const blogPosts = data.allContentfulMyBlog.nodes;
-	console.log(data);
+
 	return (
 		<Layout>
 			<SEO
