@@ -10,7 +10,7 @@ export default function SocialSharing() {
 			<Row className={styles.shareButtonHolder}>
 				<Col xs={3} sm={2}>
 					<a
-						href={`https://facebook.com/sharer/sharer.php?href=${url}`}
+						href={`https://facebook.com/sharer/sharer.php?u=${url}`}
 						target="_blank"
 						rel="noopener noreferrer"
 						aria-label="Share on Facebook"
