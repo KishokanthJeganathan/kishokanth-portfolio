@@ -53,7 +53,6 @@ export default function BlogTemplate({ data }) {
 			[MARKS.BOLD]: (text) => <Bold>{text}</Bold>,
 			[MARKS.CODE]: (text) => <Code>{text}</Code>
 		},
-		renderText: (text) => text.replace('!', '?'),
 		renderNode: {
 			[BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
 			'embedded-asset-block': (node) => {
