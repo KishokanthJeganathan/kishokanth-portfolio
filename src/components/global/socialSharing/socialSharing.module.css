@@ -1,4 +1,5 @@
 .share-button-holder {
 	display: flex;
 	justify-content: center;
+	padding-top: 2rem;
 }
