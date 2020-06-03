@@ -12,7 +12,6 @@ const query = graphql`
 		allContentfulMyBlog(filter: { featureOnHomepage: { eq: true } }, sort: { order: DESC, fields: published }) {
 			nodes {
 				featureOnHomepage
-				order
 				slug
 				projectIntro {
 					internal {
