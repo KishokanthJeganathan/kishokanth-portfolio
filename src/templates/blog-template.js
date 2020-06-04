@@ -95,7 +95,6 @@ export default function BlogTemplate({ data }) {
 	};
 
 	const { json } = data.contentfulMyBlog.richdata;
-	console.log(data);
 
 	return (
 		<Layout>
