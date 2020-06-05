@@ -12,7 +12,7 @@ module.exports = {
 	/* Your site config here */
 	siteMetadata: {
 		title: 'Kishokanth.com',
-		titleTemplate: '%s',
+		titleTemplate: '%s | Kishokanth.com',
 		description:
 			'Welcome to my portfolio where I showcase my web development work and write article with tips on front-end development',
 		siteUrl: 'https://kishokanth.com', // No trailing slash allowed!
