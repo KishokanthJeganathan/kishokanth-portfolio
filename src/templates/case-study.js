@@ -23,12 +23,13 @@ export const query = graphql`
 			projectIntro {
 				projectIntro
 			}
+			linkToProject
 			heading1
 			heading2
 			heading3
 			heading4
 			headerimage {
-				fluid {
+				fluid(maxWidth: 2000, quality: 100) {
 					...GatsbyContentfulFluid
 				}
 				title
@@ -46,19 +47,19 @@ export const query = graphql`
 				content4
 			}
 			image2 {
-				fluid {
+				fluid(maxWidth: 2000, quality: 100) {
 					...GatsbyContentfulFluid
 				}
 				title
 			}
 			image3 {
-				fluid {
+				fluid(maxWidth: 2000, quality: 100) {
 					...GatsbyContentfulFluid
 				}
 				title
 			}
 			image4 {
-				fluid {
+				fluid(maxWidth: 2000, quality: 100) {
 					...GatsbyContentfulFluid
 				}
 				title
@@ -68,7 +69,7 @@ export const query = graphql`
 			}
 			quoteName
 			quoteImage {
-				fluid {
+				fluid(maxWidth: 2000, quality: 100) {
 					...GatsbyContentfulFluid
 				}
 				title
@@ -81,7 +82,7 @@ export const query = graphql`
 				stacksInvolved
 			}
 			portfolioCoverImage {
-				fluid {
+				fluid(maxWidth: 2000, quality: 100) {
 					...GatsbyContentfulFluid
 				}
 				title
@@ -114,7 +115,8 @@ export default function caseStudy({ data }) {
 		quoteName,
 		scopeOfWork,
 		stacksInvolved,
-		ctaText
+		ctaText,
+		linkToProject
 	} = data.contentfulMyPortfolio;
 
 	return (
@@ -140,10 +142,16 @@ export default function caseStudy({ data }) {
 							<p className={styles.contentPSm}>{stacksInvolved.stacksInvolved}</p>
 						</Col>
 						<Col xs={12} md={3}>
-							<p className={styles.contentPLg}>Interested?</p>
-							<Link className={styles.emailAddress} to="/contact">
-								Let's Talk!
-							</Link>
+							<p className={styles.contentPLg}>Check the project out:</p>
+
+							<a
+								href={linkToProject}
+								target="_blank"
+								rel="noreferrer noopener"
+								className={styles.emailAddress}
+							>
+								Click here
+							</a>
 						</Col>
 					</Row>
 				</Col>
