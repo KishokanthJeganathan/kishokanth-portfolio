@@ -51,7 +51,7 @@ export default function HireMe() {
 							<p>
 								PS- I have a
 								<a
-									href="https://www.kishokanth.com/blog/what-makes-a-great-web-development-partnership"
+									href="https://www.kishokanth.com/blog/what-is-a-great-front-end-project-partnership"
 									className={styles.hireMeBlogPost}
 								>
 									blog post
