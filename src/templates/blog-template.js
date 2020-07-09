@@ -100,10 +100,11 @@ export default function BlogTemplate({ data }) {
 		<Layout>
 			<SEO
 				title={data.contentfulMyBlog.nameOfProject}
-				description={data.contentfulMyBlog.metaDescription}
+				description={data.contentfulMyBlog.projectIntro.internal.content}
 				article
-				image={data.contentfulMyBlog.metaImageLink}
+				image={data.contentfulMyBlog.headerimage.fluid.src}
 			/>
+
 			<Col>
 				<Row className={styles.row}>
 					<Col xs={12} md={10} className={styles.image}>
