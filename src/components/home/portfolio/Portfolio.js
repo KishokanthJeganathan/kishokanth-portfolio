@@ -58,7 +58,7 @@ export default function Portfolio() {
 				</Row>
 			</Col>
 			<Col>
-				<Link className={styles.link}>
+				<Link className={styles.link} to="portfolio">
 					<span className={globalstyles.p1}>See More Projects</span>
 				</Link>
 			</Col>
