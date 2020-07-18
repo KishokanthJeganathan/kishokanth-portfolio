@@ -12,7 +12,11 @@ import SEO from '../components/global/seo';
 export default function index() {
 	return (
 		<Layout>
-			<SEO title="Home" />
+			<SEO
+				title="Home"
+				description="Welcome to my portfolio where I showcase my web development work and write article with tips on front-end development"
+				image="https://i.ibb.co/T4nfB1c/Landing-page-image.jpg"
+			/>
 			<Row>
 				<IntroText />
 				<Portfolio />
