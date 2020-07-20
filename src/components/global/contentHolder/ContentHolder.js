@@ -8,7 +8,10 @@ import globalstyles from '../../global/global.module.css';
 export default function ContentHolder({ xs, sm, md, lg, nameOfProject, src, intro, slug }) {
 	return (
 		<Col xs={xs} sm={sm} md={md} lg={lg} className={styles.contentHolder}>
-			<Img fluid={src} />
+			<Link to={`/portfolio/${slug}`} className={styles.readMore}>
+				<Img fluid={src} />
+			</Link>
+
 			<div className={styles.content}>
 				<h3 className={globalstyles.h3}> {nameOfProject}</h3>
 				<p className={globalstyles.p2}>
