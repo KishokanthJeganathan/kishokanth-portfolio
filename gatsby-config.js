@@ -12,13 +12,12 @@ module.exports = {
 	/* Your site config here */
 	siteMetadata: {
 		title: 'Kishokanth.com',
-		titleTemplate: '%s | Kishokanth.com',
+		titleTemplate: '%s · The Real Hero',
 		description:
 			'Welcome to my portfolio where I showcase my web development work and write article with tips on front-end development',
-		siteUrl: 'https://kishokanth.com', // No trailing slash allowed!
-		image: 'https://i.ibb.co/T4nfB1c/Landing-page-image.jpg',
-		twitterUsername: '@kishojegan',
-		author: 'Kishokanth Jeganathan'
+		url: 'https://kishokanth.com', // No trailing slash allowed!
+		image: 'https://i.ibb.co/T4nfB1c/Landing-page-image.jpg', // Path to your image you placed in the 'static' folder
+		twitterUsername: '@kishojegan'
 	},
 	plugins: [
 		{
