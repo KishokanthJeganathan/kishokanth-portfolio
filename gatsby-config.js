@@ -12,13 +12,14 @@ module.exports = {
 	/* Your site config here */
 	siteMetadata: {
 		title: `Kishokanth.com`,
-		titleTemplate: `%s · The Real Hero`,
+		titleTemplate: `%s | Kishokanth.com`,
 		description: `Welcome to my portfolio where I showcase my web development work and write article with tips on front-end development`,
-		url: `https://kishokanth.com`, // No trailing slash allowed!
+		siteUrl: `https://kishokanth.com`, // No trailing slash allowed!
 		image: `https://i.ibb.co/T4nfB1c/Landing-page-image.jpg`, // Path to your image you placed in the 'static' folder
 		twitterUsername: `@kishojegan`,
 		author: `Kishokanth Jeganathan`
 	},
+
 	plugins: [
 		{
 			resolve: `gatsby-plugin-gdpr-cookies`,
