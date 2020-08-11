@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import styles from '../navigationBar/navigationBar.module.css';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import Links from '../../../constants/Links';
 import { v4 as uuidv4 } from 'uuid';
+import ThemeContext from '../../context/ThemeContext';
 
 const query = graphql`
 	query {
@@ -24,14 +25,10 @@ const query = graphql`
 export default function NavigationBar() {
 	const data = useStaticQuery(query);
 	const { name, tittle, picture } = data.allContentfulProfile.nodes[0];
+	const { dark } = useContext(ThemeContext);
 	return (
-		<Navbar
-			collapseOnSelect
-			sticky="top"
-			expand="md"
-			className={styles.NavigationBar}
-			style={{ backgroundColor: 'white' }}
-		>
+		<Navbar collapseOnSelect sticky="top" expand="md" className={styles.NavigationBar}>
+			{console.log(dark)}
 			<Link to="/">
 				<Navbar.Brand>
 					<div className={styles.authorDetails}>

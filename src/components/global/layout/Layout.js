@@ -6,7 +6,7 @@ import styles from '../layout/layout.module.css';
 
 export default function Layout({ children }) {
 	return (
-		<Container className={styles.layout}>
+		<Container fluid className={styles.layout}>
 			<NavigationBar />
 			{children}
 			<Footer />
