@@ -14,7 +14,7 @@ module.exports = {
 		title: `Kishokanth.com`,
 		titleTemplate: `%s | Kishokanth.com`,
 		description: `Welcome to my portfolio where I showcase my web development work and write article with tips on front-end development`,
-		siteUrl: `http://kishokanth.com`, // No trailing slash allowed!
+		siteUrl: `https://kishokanth.com`, // No trailing slash allowed!
 		image: `https://i.ibb.co/T4nfB1c/Landing-page-image.jpg`, // Path to your image you placed in the 'static' folder
 		twitterUsername: `@kishojegan`,
 		author: `Kishokanth Jeganathan`
@@ -49,8 +49,8 @@ module.exports = {
 		{
 			resolve: 'gatsby-plugin-robots-txt',
 			options: {
-				host: 'http://kishokanth.com',
-				sitemap: 'http://kishokanth.com/sitemap.xml',
+				host: 'https://kishokanth.com',
+				sitemap: 'https://kishokanth.com/sitemap.xml',
 				policy: [ { userAgent: '*', allow: '/' } ]
 			}
 		},
@@ -78,7 +78,7 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-canonical-urls`,
 			options: {
-				siteUrl: `http://kishokanth.com`
+				siteUrl: `https://kishokanth.com`
 			}
 		},
 
