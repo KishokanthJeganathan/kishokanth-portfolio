@@ -126,6 +126,7 @@ export default function caseStudy({ data }) {
 				description={data.contentfulMyPortfolio.metaDescription}
 				image={data.contentfulMyPortfolio.metaImageLink}
 			/>
+
 			<Row>
 				<Col xs={12} md={9} lg={6} className={styles.intro}>
 					<h1 className={styles.h1}>{nameOfProject}</h1>
