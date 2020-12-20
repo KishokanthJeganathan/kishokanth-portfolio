@@ -10,6 +10,7 @@ import Img from 'gatsby-image';
 import EmailSubscriberForm from '../components/global/emailSubscriberForm/EmailSubscriberForm';
 import SEO from '../components/global/seo';
 import SocialSharing from '../components/global/socialSharing/SocialSharing';
+import { graphql } from 'gatsby';
 
 export const query = graphql`
 	query($slug: String) {
