@@ -1,61 +1,60 @@
 .video-holder {
-	display: flex;
-	justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .row {
-	display: flex;
-	justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 a {
-	color: rgb(253, 182, 49);
+  color: rgb(253, 182, 49);
 }
 
 a:hover {
-	color: rgb(253, 182, 49);
+  color: rgb(253, 182, 49);
 }
 
 .image {
-	margin-top: 1rem;
-	padding: 0;
+  margin-top: 1rem;
+  padding: 0;
 }
 
 .content {
-	padding: 0;
-	margin-top: 1rem;
+  padding: 0;
+  margin-top: 1rem;
 }
 
 .published-date,
 .reading-time {
-	margin: 0;
-	color: grey;
+  margin: 0;
+  color: grey;
 }
 
 blockquote {
-	border-left: 5px solid rgb(0, 0, 0);
-	padding-left: 2rem;
+  border-left: 5px solid rgb(0, 0, 0);
+  padding-left: 2rem;
 }
 
 .img {
-	width: 100%;
-	margin-bottom: 1rem;
-	-webkit-box-shadow: 8px 9px 13px -5px rgba(0, 0, 0, 0.75);
-	-moz-box-shadow: 8px 9px 13px -5px rgba(0, 0, 0, 0.75);
-	box-shadow: 8px 9px 13px -5px rgba(0, 0, 0, 0.75);
+  width: 100%;
+  margin-bottom: 1rem;
+  -webkit-box-shadow: 8px 9px 13px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 8px 9px 13px -5px rgba(0, 0, 0, 0.75);
+  box-shadow: 8px 9px 13px -5px rgba(0, 0, 0, 0.75);
 }
 
 .p {
-	font-size: 1.1rem;
-	color: grey;
+  font-size: 1.1rem;
 }
 
 @media only screen and (max-device-width: 576px) {
-	.reading-time {
-		text-align: left;
-	}
+  .reading-time {
+    text-align: left;
+  }
 
-	.h1 {
-		text-align: left;
-	}
+  .h1 {
+    text-align: left;
+  }
 }

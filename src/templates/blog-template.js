@@ -38,11 +38,6 @@ export const query = graphql`
 
 const website_url = 'https://kishokanth.com/';
 
-const Bold = ({ children }) => (
-	<strong>
-		<p className={styles.bold}>{children}</p>
-	</strong>
-);
 const Text = ({ children }) => <p className={styles.p}>{children}</p>;
 
 const Code = ({ children }) => (
@@ -54,7 +49,7 @@ const Code = ({ children }) => (
 export default function BlogTemplate({ data }) {
 	const options = {
 		renderMark: {
-			[MARKS.BOLD]: (text) => <Bold>{text}</Bold>,
+			[MARKS.BOLD]: (text) => <strong style={{ fontSize: '1.3rem', fontWeight: 'bold' }}>{text}</strong>,
 			[MARKS.CODE]: (text) => <Code>{text}</Code>
 		},
 		renderNode: {
