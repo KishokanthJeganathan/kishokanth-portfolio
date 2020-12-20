@@ -37,7 +37,11 @@ export const query = graphql`
 
 const website_url = 'https://kishokanth.com/';
 
-const Bold = ({ children }) => <p className={styles.bold}>{children}</p>;
+const Bold = ({ children }) => (
+	<strong>
+		<p className={styles.bold}>{children}</p>
+	</strong>
+);
 const Text = ({ children }) => <p className={styles.p}>{children}</p>;
 
 const Code = ({ children }) => (
