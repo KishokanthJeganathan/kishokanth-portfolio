@@ -54,15 +54,15 @@ export default function BlogTemplate({ data }) {
 		},
 		renderNode: {
 			[BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
-			'embedded-asset-block': (node) => {
-				return (
-					<img
-						src={node.data.target.fields.file['en-US'].url}
-						className={styles.img}
-						alt={node.data.target.fields.title['en-US']}
-					/>
-				);
-			},
+			// 'embedded-asset-block': (node) => {
+			// 	return (
+			// 		<img
+			// 			src={node.data.target.fields.file['en-US'].url}
+			// 			className={styles.img}
+			// 			alt={node.data.target.fields.title['en-US']}
+			// 		/>
+			// 	);
+			// },
 			[INLINES.HYPERLINK]: (node) => {
 				if (node.data.uri.indexOf('youtube.com') !== -1) {
 					return (
